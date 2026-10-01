@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-nastaliq: 'Noto Nastaliq Urdu', serif;
+    --font-arabic-ui: 'Noto Sans Arabic', sans-serif;
+    --font-serif: 'Newsreader', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Editorial Archival Theme (Light) */
+    --bg-page: #faf8f5;
+    --bg-card: #ffffff;
+    --bg-card-subtle: #f5f2eb;
+    --bg-card-border: #e6e0d4;
+    --text-primary: #1c1917;
+    --text-secondary: #57534e;
+    --text-muted: #78716c;
+    --accent: #b43e18;
+    --accent-hover: #983313;
+    --accent-subtle: #fbf0eb;
+    --accent-border: #f2cbbe;
+    --border-subtle: #eae5da;
+    --nav-bg: rgba(250, 248, 245, 0.92);
+  }
+
+  [data-theme="dark"] {
+    --bg-page: #0d1117;
+    --bg-card: #161b22;
+    --bg-card-subtle: #1c222c;
+    --bg-card-border: #2d3542;
+    --text-primary: #f0f3f6;
+    --text-secondary: #9da7b3;
+    --text-muted: #6e7681;
+    --accent: #e06d40;
+    --accent-hover: #f08357;
+    --accent-subtle: #2b1d18;
+    --accent-border: #523126;
+    --border-subtle: #242c38;
+    --nav-bg: rgba(13, 17, 23, 0.92);
+  }
+
+  [data-theme="sepia"] {
+    --bg-page: #f4ecd8;
+    --bg-card: #fcf6e8;
+    --bg-card-subtle: #eae0c5;
+    --bg-card-border: #d8cbb0;
+    --text-primary: #2d261e;
+    --text-secondary: #5f5244;
+    --text-muted: #827260;
+    --accent: #9c3f1f;
+    --accent-hover: #7f3217;
+    --accent-subtle: #eeddce;
+    --accent-border: #e0beaa;
+    --border-subtle: #ded1b8;
+    --nav-bg: rgba(244, 236, 216, 0.92);
+  }
+
+  body {
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    transition: background-color 0.25s ease, color 0.25s ease;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Typography Helpers for Urdu Nastaliq & Academic Reading */
+.font-nastaliq {
+  font-family: 'Noto Nastaliq Urdu', serif;
+  line-height: 2.3;
+}
+
+.font-arabic-ui {
+  font-family: 'Noto Sans Arabic', sans-serif;
+}
+
+.font-serif-editorial {
+  font-family: 'Newsreader', Georgia, serif;
+}
+
+.font-mono-code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Nastaliq Font Size Variations */
+.urdu-reading-text {
+  font-family: 'Noto Nastaliq Urdu', serif;
+  line-height: 2.45;
+  letter-spacing: 0;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.urdu-size-sm .urdu-reading-text {
+  font-size: 1.05rem;
+  line-height: 2.2;
+}
+
+.urdu-size-md .urdu-reading-text {
+  font-size: 1.25rem;
+  line-height: 2.45;
+}
+
+.urdu-size-lg .urdu-reading-text {
+  font-size: 1.45rem;
+  line-height: 2.7;
+}
+
+/* English inline term embedded in Urdu text */
+.en-term {
+  display: inline-block;
+  direction: ltr;
+  unicode-bidi: isolate;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.92em;
+  padding: 0.05rem 0.45rem;
+  margin: 0 0.25rem;
+  border-radius: 0.35rem;
+  background-color: var(--bg-card-subtle);
+  border: 1px solid var(--bg-card-border);
+  color: var(--accent);
+  vertical-align: baseline;
+  line-height: 1.3;
+}
+
+/* Reading Progress Bar */
+#reading-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #b43e18, #d97706);
+  width: 0%;
+  z-index: 100;
+  transition: width 0.1s ease-out;
+}
+
+/* HTMX Transition Animations */
+.htmx-swapping {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.htmx-settling {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 260ms ease, transform 260ms ease;
+}
+
+/* Custom Scrollbar for clean editorial look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-card-border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}

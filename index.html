@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>پیچیدگی اور ایجنٹ بیسڈ ماڈلنگ — ڈاکٹر محمد یاسر | EmergenceX Lab</title>
+  
+  <meta name="description" content="سلسلہ سسٹمز تھنکنگ و پیچیدگی: ڈاکٹر محمد یاسر (چیئرمین شعبہ کمپیوٹر سائنس، UET لاہور) کی خصوصی علمی نگارش برائے کمپلیکس اور کمپلیکیٹڈ سسٹمز، اینالیٹیکل باؤنڈری اور ایجنٹ بیسڈ ماڈلنگ۔" />
+  <meta name="keywords" content="Systems Thinking, Complexity Science, Agent-Based Modeling, Urdu Science, Dr. Muhammad Yasir, UET Lahore, EmergenceX" />
+  <meta name="author" content="Dr. Muhammad Yasir" />
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="لیکچر 4: پیچیدگی اور ایجنٹ بیسڈ ماڈلنگ — EmergenceX" />
+  <meta property="og:description" content="کیا ایک ہی بڑے نظام میں Complicated اور Complex دونوں پہلو موجود ہو سکتے ہیں؟ بوئنگ 747 اور ایوی ایشن ایکو سسٹم کی مثال سے سمجھیے۔" />
+  <meta property="og:image" content="/assets/lecture_complexity_diagram.jpg" />
+
+  <!-- Google Fonts for Authentic Urdu Nastaliq & Editorial Latin -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b43e18' stroke-width='2'><circle cx='12' cy='12' r='10'/><path d='m4.93 4.93 4.24 4.24'/><path d='m14.83 9.17 4.24-4.24'/><path d='m14.83 14.83 4.24 4.24'/><path d='m9.17 14.83-4.24 4.24'/><circle cx='12' cy='12' r='4'/></svg>" />
+</head>
+
+<body class="min-h-screen bg-[var(--bg-page)] text-[var(--text-primary)] antialiased selection:bg-[var(--accent)] selection:text-white transition-colors duration-200">
+  
+  <!-- Fixed Reading Progress Indicator -->
+  <div id="reading-progress-bar"></div>
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-40 w-full border-b border-[var(--border-subtle)] bg-[var(--nav-bg)] backdrop-blur-md transition-colors">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between">
+      
+      <!-- Brand & Lab Identity -->
+      <div class="flex items-center gap-3">
+        <button id="toggle-drawer-btn" class="p-2 rounded-lg bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)] hover:bg-[var(--accent-subtle)] text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors cursor-pointer" aria-label="تمام لیکچرز کی فہرست" title="تمام لیکچرز">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+
+        <div class="text-right">
+          <a href="/" class="group inline-flex items-center gap-2">
+            <span class="font-serif-editorial text-xl sm:text-2xl font-bold tracking-tight text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors" dir="ltr">
+              Emergence<span class="text-[var(--accent)]">X</span>
+            </span>
+            <span class="hidden md:inline-block px-2 py-0.5 rounded text-[11px] font-mono-code bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)] text-[var(--text-muted)]" dir="ltr">
+              Complexity Science Lab
+            </span>
+          </a>
+          <p class="text-[11px] font-arabic-ui text-[var(--text-muted)] leading-tight hidden sm:block">
+            ڈاکٹر محمد یاسر • چیئرمین شعبہ کمپیوٹر سائنس، UET لاہور
+          </p>
+        </div>
+      </div>
+
+      <!-- Center: Active Series Indicator -->
+      <div class="hidden lg:flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--bg-card)] border border-[var(--bg-card-border)] text-xs font-arabic-ui shadow-2xs">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span class="text-[var(--text-muted)]">موجودہ سلسلہ:</span>
+        <span class="font-semibold text-[var(--text-primary)]">سسٹمز تھنکنگ و ایجنٹ بیسڈ ماڈلنگ</span>
+      </div>
+
+      <!-- Controls: Font Scaler & Theme Selector -->
+      <div class="flex items-center gap-2" dir="ltr">
+        
+        <!-- Nastaliq Font Size Controls -->
+        <div class="flex items-center rounded-lg p-0.5 bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)] text-xs">
+          <button data-font-size="sm" class="px-2 py-1 rounded text-xs font-arabic-ui hover:text-[var(--accent)] transition-colors cursor-pointer" title="چھوٹا فونٹ سائز">
+            A-
+          </button>
+          <button data-font-size="md" class="px-2 py-1 rounded text-xs font-arabic-ui hover:text-[var(--accent)] transition-colors cursor-pointer" title="معیاری فونٹ سائز">
+            A
+          </button>
+          <button data-font-size="lg" class="px-2 py-1 rounded text-xs font-arabic-ui hover:text-[var(--accent)] transition-colors cursor-pointer" title="بڑا فونٹ سائز">
+            A+
+          </button>
+        </div>
+
+        <!-- Theme Picker Buttons -->
+        <div class="flex items-center rounded-lg p-0.5 bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)] text-xs">
+          <button data-theme-btn="light" class="p-1.5 rounded transition-all cursor-pointer" title="روشن (Light Paper)">
+            <i data-lucide="sun" class="w-3.5 h-3.5"></i>
+          </button>
+          <button data-theme-btn="sepia" class="p-1.5 rounded transition-all cursor-pointer font-serif-editorial text-xs px-2" title="سیپیا (Sepia Parchment)">
+            قلم
+          </button>
+          <button data-theme-btn="dark" class="p-1.5 rounded transition-all cursor-pointer" title="تاریک (Obsidian Ink)">
+            <i data-lucide="moon" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Slide-out Lecture Series Drawer (RTL) -->
+  <aside id="lecture-drawer" class="fixed top-0 right-0 z-50 h-full w-80 sm:w-96 bg-[var(--bg-card)] border-l border-[var(--bg-card-border)] shadow-2xl transition-transform duration-300 ease-in-out translate-x-full overflow-y-auto" dir="rtl">
+    <div class="p-5 border-b border-[var(--border-subtle)] flex items-center justify-between">
+      <div>
+        <h3 class="font-arabic-ui font-bold text-base text-[var(--text-primary)]">تمام لیکچرز کی فہرست</h3>
+        <p class="text-xs text-[var(--text-muted)] font-arabic-ui">سلسلہ سسٹمز تھنکنگ و پیچیدگی</p>
+      </div>
+      <button id="close-drawer-btn" class="p-1.5 rounded-lg hover:bg-[var(--bg-card-subtle)] text-[var(--text-muted)] hover:text-[var(--text-primary)] cursor-pointer">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <!-- Ordered Lecture Navigation List -->
+    <nav class="p-4 space-y-3 font-arabic-ui">
+      
+      <!-- Lecture 01 -->
+      <div 
+        hx-get="/lectures/lecture-1.html" 
+        hx-target="#main-content" 
+        hx-swap="innerHTML transition:true"
+        hx-push-url="?lecture=1"
+        class="p-3.5 rounded-xl border border-[var(--bg-card-border)] bg-[var(--bg-card)] hover:border-[var(--accent-border)] transition-all cursor-pointer group"
+      >
+        <div class="mb-1">
+          <span class="text-xs font-mono-code text-[var(--accent)] font-semibold" dir="ltr">Lecture 01</span>
+        </div>
+        <h4 class="font-semibold text-sm text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors">
+          ہجوم میں ہر فرد اپنی راہ خود تلاش کرتا ہے
+        </h4>
+        <p class="text-xs text-[var(--text-muted)] mt-1">حج، کُمبھ میلہ اور کراؤڈ ڈائنامکس کا سائنسی تجزیہ۔</p>
+      </div>
+
+      <!-- Lecture 02 -->
+      <div 
+        hx-get="/lectures/lecture-2.html" 
+        hx-target="#main-content" 
+        hx-swap="innerHTML transition:true"
+        hx-push-url="?lecture=2"
+        class="p-3.5 rounded-xl border border-[var(--bg-card-border)] bg-[var(--bg-card)] hover:border-[var(--accent-border)] transition-all cursor-pointer group"
+      >
+        <div class="mb-1">
+          <span class="text-xs font-mono-code text-[var(--accent)] font-semibold" dir="ltr">Lecture 02</span>
+        </div>
+        <h4 class="font-semibold text-sm text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors">
+          فرد قائم ربطِ ملت سے ہے، تنہا کچھ نہیں
+        </h4>
+        <p class="text-xs text-[var(--text-muted)] mt-1">پرندوں کا غول، ایمرجنس اور سیلف آرگنائزیشن۔</p>
+      </div>
+
+      <!-- Lecture 03 -->
+      <div 
+        hx-get="/lectures/lecture-3.html" 
+        hx-target="#main-content" 
+        hx-swap="innerHTML transition:true"
+        hx-push-url="?lecture=3"
+        class="p-3.5 rounded-xl border border-[var(--bg-card-border)] bg-[var(--bg-card)] hover:border-[var(--accent-border)] transition-all cursor-pointer group"
+      >
+        <div class="mb-1">
+          <span class="text-xs font-mono-code text-[var(--accent)] font-semibold" dir="ltr">Lecture 03</span>
+        </div>
+        <h4 class="font-semibold text-sm text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors">
+          ہر مشکل نظام Complex نہیں ہوتا (Boeing 747 vs Geese)
+        </h4>
+        <p class="text-xs text-[var(--text-muted)] mt-1">Complicated بمقابلہ Complex کا واضح سائنسی فرق۔</p>
+      </div>
+
+      <!-- Lecture 04 -->
+      <div 
+        hx-get="/lectures/lecture-4.html" 
+        hx-target="#main-content" 
+        hx-swap="innerHTML transition:true"
+        hx-push-url="?lecture=4"
+        class="p-3.5 rounded-xl border border-[var(--bg-card-border)] bg-[var(--bg-card)] hover:border-[var(--accent-border)] transition-all cursor-pointer group"
+      >
+        <div class="mb-1">
+          <span class="text-xs font-mono-code text-[var(--accent)] font-semibold" dir="ltr">Lecture 04</span>
+        </div>
+        <h4 class="font-semibold text-sm text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors">
+          پیچیدگی اور ایجنٹ بیسڈ ماڈلنگ (جہاز و ہوابازی)
+        </h4>
+        <p class="text-xs text-[var(--text-secondary)] mt-1">اینالیٹیکل باؤنڈری اور پرسپیکٹیو کی تبدیلی۔</p>
+      </div>
+
+      <!-- Lecture 05 -->
+      <div 
+        hx-get="/lectures/lecture-5.html" 
+        hx-target="#main-content" 
+        hx-swap="innerHTML transition:true"
+        hx-push-url="?lecture=5"
+        class="p-3.5 rounded-xl border border-[var(--bg-card-border)] bg-[var(--bg-card)] hover:border-[var(--accent-border)] transition-all cursor-pointer group"
+      >
+        <div class="mb-1">
+          <span class="text-xs font-mono-code text-sky-600 dark:text-sky-400 font-semibold" dir="ltr">Lecture 05</span>
+        </div>
+        <h4 class="font-semibold text-sm text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors">
+          ایجنٹ بیسڈ ماڈلنگ (ABM) کی بنیادیں اور اطلاقات
+        </h4>
+        <p class="text-xs text-[var(--text-muted)] mt-1">خودمختار ایجنٹس کے انفرادی قواعد سے میکرو پیٹرنز۔</p>
+      </div>
+
+      <!-- Lecture 06 -->
+      <div 
+        hx-get="/lectures/lecture-6.html" 
+        hx-target="#main-content" 
+        hx-swap="innerHTML transition:true"
+        hx-push-url="?lecture=6"
+        class="p-3.5 rounded-xl border border-[var(--bg-card-border)] bg-[var(--bg-card)] hover:border-[var(--accent-border)] transition-all cursor-pointer group"
+      >
+        <div class="mb-1">
+          <span class="text-xs font-mono-code text-rose-600 dark:text-rose-400 font-semibold" dir="ltr">Lecture 06</span>
+        </div>
+        <h4 class="font-semibold text-sm text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors">
+          کیا ایک خلیے کے رویّے سے پورے ٹیومر کی کہانی سمجھی جا سکتی ہے؟
+        </h4>
+        <p class="text-xs text-[var(--text-muted)] mt-1">کینسر بائیولوجی اور آنکولوجی میں ایجنٹ بیسڈ ماڈلنگ۔</p>
+      </div>
+
+      <!-- Lecture 07 -->
+      <div 
+        hx-get="/lectures/lecture-7.html" 
+        hx-target="#main-content" 
+        hx-swap="innerHTML transition:true"
+        hx-push-url="?lecture=7"
+        class="p-3.5 rounded-xl border border-[var(--bg-card-border)] bg-[var(--bg-card)] hover:border-[var(--accent-border)] transition-all cursor-pointer group"
+      >
+        <div class="mb-1">
+          <span class="text-xs font-mono-code text-emerald-600 dark:text-emerald-400 font-semibold" dir="ltr">Lecture 07</span>
+        </div>
+        <h4 class="font-semibold text-sm text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors">
+          نتیجہ ہمیشہ کہانی کا اختتام نہیں ہوتا (Reinforcing Feedback)
+        </h4>
+        <p class="text-xs text-[var(--text-muted)] mt-1">جب ایک تبدیلی مزید تبدیلی پیدا کرے (Micro ➔ Macro ➔ Micro)۔</p>
+      </div>
+
+      <!-- Lecture 08 -->
+      <div 
+        hx-get="/lectures/lecture-8.html" 
+        hx-target="#main-content" 
+        hx-swap="innerHTML transition:true"
+        hx-push-url="?lecture=8"
+        class="p-3.5 rounded-xl border border-[var(--bg-card-border)] bg-[var(--bg-card)] hover:border-[var(--accent-border)] transition-all cursor-pointer group"
+      >
+        <div class="mb-1">
+          <span class="text-xs font-mono-code text-blue-600 dark:text-blue-400 font-semibold" dir="ltr">Lecture 08</span>
+        </div>
+        <h4 class="font-semibold text-sm text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors">
+          مسلسل بڑھتی ہوئی تبدیلی کو کیسے روکیں؟ (Balancing Feedback)
+        </h4>
+        <p class="text-xs text-[var(--text-muted)] mt-1">مطلوبہ اور موجودہ حالت کا فرق اور اصلاحی اقدامات۔</p>
+      </div>
+
+      <!-- Lecture 09 -->
+      <div 
+        hx-get="/lectures/lecture-9.html" 
+        hx-target="#main-content" 
+        hx-swap="innerHTML transition:true"
+        hx-push-url="?lecture=9"
+        class="p-3.5 rounded-xl border border-[var(--bg-card-border)] bg-[var(--bg-card)] hover:border-[var(--accent-border)] transition-all cursor-pointer group"
+      >
+        <div class="mb-1">
+          <span class="text-xs font-mono-code text-violet-600 dark:text-violet-400 font-semibold" dir="ltr">Lecture 09</span>
+        </div>
+        <h4 class="font-semibold text-sm text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors">
+          اب ہم سسٹمز کو کمپیوٹر میں ماڈل اور تجربہ کریں گے
+        </h4>
+        <p class="text-xs text-[var(--text-muted)] mt-1">سسٹمز تھنکنگ سے کمپیوٹیشنل ماڈلنگ (NetLogo, Mesa) تک۔</p>
+      </div>
+
+      <!-- Lecture 10 -->
+      <div 
+        hx-get="/lectures/lecture-10.html" 
+        hx-target="#main-content" 
+        hx-swap="innerHTML transition:true"
+        hx-push-url="?lecture=10"
+        class="p-3.5 rounded-xl border border-[var(--bg-card-border)] bg-[var(--bg-card)] hover:border-[var(--accent-border)] transition-all cursor-pointer group"
+      >
+        <div class="mb-1">
+          <span class="text-xs font-mono-code text-indigo-600 dark:text-indigo-400 font-semibold" dir="ltr">Lecture 10</span>
+        </div>
+        <h4 class="font-semibold text-sm text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors">
+          ایجنٹ بیسڈ ماڈلنگ (ABM) شروع کرنی ہے—لیکن کس Tool سے؟
+        </h4>
+        <p class="text-xs text-[var(--text-muted)] mt-1">NetLogo, Mesa, GAMA, Repast اور AnyLogic کا باہمی موازنہ۔</p>
+      </div>
+
+    </nav>
+  </aside>
+
+  <!-- Drawer Backdrop Overlay -->
+  <div id="drawer-backdrop" class="fixed inset-0 z-45 bg-black/40 backdrop-blur-xs hidden transition-opacity"></div>
+
+  <!-- Main Content Container: Dynamically swapped by HTMX -->
+  <main id="main-content" class="min-h-[85vh] transition-all duration-200" hx-get="/lectures/lecture-4.html" hx-trigger="load">
+    <!-- Initial Loader skeleton while HTMX fetches the current lecture -->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+      <div class="w-10 h-10 border-3 border-[var(--accent-border)] border-t-[var(--accent)] rounded-full animate-spin mx-auto mb-4"></div>
+      <p class="font-arabic-ui text-sm text-[var(--text-muted)]">علمی نگارش لوڈ کی جا رہی ہے...</p>
+    </div>
+  </main>
+
+  <!-- Scholarly Editorial Footer -->
+  <footer class="border-t border-[var(--border-subtle)] bg-[var(--bg-card)] py-12 text-right">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 pb-8 border-b border-[var(--border-subtle)]">
+        
+        <!-- Column 1: Lab Mission -->
+        <div>
+          <h3 class="font-serif-editorial text-lg font-bold text-[var(--text-primary)] mb-2" dir="ltr">
+            Emergence<span class="text-[var(--accent)]">X</span> Research Lab
+          </h3>
+          <p class="font-arabic-ui text-xs text-[var(--text-secondary)] leading-relaxed">
+            انٹر ڈسپلنری کمپلیکسٹی سائنس لیب، شعبہ کمپیوٹر سائنس، یونیورسٹی آف انجینئرنگ اینڈ ٹیکنالوجی (UET) لاہور، فیصل آباد کیمپس۔ سسٹمز تھنکنگ، نیٹ ورک تھیوری اور ایجنٹ بیسڈ ماڈلنگ پر تحقیق و تدریس کا مرکز۔
+          </p>
+        </div>
+
+        <!-- Column 2: Author Credentials -->
+        <div>
+          <h4 class="font-arabic-ui font-bold text-sm text-[var(--text-primary)] mb-2">ڈائریکٹر و چیئرمین</h4>
+          <p class="font-arabic-ui text-xs text-[var(--text-secondary)] leading-relaxed mb-1">
+            <strong>ڈاکٹر محمد یاسر</strong>
+          </p>
+          <p class="font-arabic-ui text-xs text-[var(--text-muted)] leading-relaxed">
+            چیئرمین شعبہ کمپیوٹر سائنس، ڈائریکٹر EmergenceX لیب، UET لاہور، فیصل آباد کیمپس۔
+          </p>
+          <div class="mt-3 text-[11px] font-mono-code text-[var(--text-muted)]" dir="ltr">
+            Disclaimer: Illustration is made with AI assistance
+          </div>
+        </div>
+
+        <!-- Column 3: Quick Navigation -->
+        <div>
+          <h4 class="font-arabic-ui font-bold text-sm text-[var(--text-primary)] mb-2">لیکچر سیریز کا تسلسل</h4>
+          <ul class="space-y-1.5 text-xs font-arabic-ui text-[var(--text-secondary)]">
+            <li>
+              <a href="?lecture=10" hx-get="/lectures/lecture-10.html" hx-target="#main-content" hx-swap="innerHTML transition:true" class="hover:text-[var(--accent)] transition-colors font-medium">
+                لیکچر 10: ایجنٹ بیسڈ ماڈلنگ شروع کرنی ہے—کس Tool سے؟
+              </a>
+            </li>
+            <li>
+              <a href="?lecture=9" hx-get="/lectures/lecture-9.html" hx-target="#main-content" hx-swap="innerHTML transition:true" class="hover:text-[var(--accent)] transition-colors">
+                لیکچر 09: سسٹمز تھنکنگ سے کمپیوٹیشنل ماڈلنگ تک
+              </a>
+            </li>
+            <li>
+              <a href="?lecture=8" hx-get="/lectures/lecture-8.html" hx-target="#main-content" hx-swap="innerHTML transition:true" class="hover:text-[var(--accent)] transition-colors">
+                لیکچر 08: متوازن فیڈبیک (Balancing Feedback)
+              </a>
+            </li>
+            <li>
+              <a href="?lecture=4" hx-get="/lectures/lecture-4.html" hx-target="#main-content" hx-swap="innerHTML transition:true" class="hover:text-[var(--accent)] transition-colors">
+                لیکچر 04: پیچیدگی اور ایجنٹ بیسڈ ماڈلنگ (جہاز و ہوابازی)
+              </a>
+            </li>
+            <li>
+              <a href="?lecture=1" hx-get="/lectures/lecture-1.html" hx-target="#main-content" hx-swap="innerHTML transition:true" class="hover:text-[var(--accent)] transition-colors">
+                لیکچر 01: ہجوم میں ہر فرد اپنی راہ خود تلاش کرتا ہے
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright & System Information -->
+      <div class="flex flex-wrap items-center justify-between gap-4 text-xs font-arabic-ui text-[var(--text-muted)]" dir="rtl">
+        <div>
+          © 2024–2026 EmergenceX Lab • جملہ حقوق بحق مصنف و ادارہ محفوظ ہیں۔
+        </div>
+        <div class="flex items-center gap-3 font-mono-code text-[11px]" dir="ltr">
+          <span>Built with HTMX + Vite + Tailwind CSS</span>
+          <span>•</span>
+          <span>Lucide Icons</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

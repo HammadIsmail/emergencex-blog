@@ -1,0 +1,293 @@
+<article id="lecture-8-article" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12" dir="rtl" lang="ur">
+  <!-- Article Header Meta -->
+  <header class="mb-10 pb-8 border-b border-[var(--border-subtle)] text-right">
+    <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/15 border border-blue-500/30 text-sm font-arabic-ui text-blue-700 dark:text-blue-400 font-medium">
+        <i data-lucide="sliders" class="w-4 h-4"></i>
+        <span>سلسلہ سسٹمز تھنکنگ و پیچیدگی — لیکچر 08</span>
+      </div>
+
+      <div class="flex items-center gap-3 text-xs font-mono-code text-[var(--text-muted)]" dir="ltr">
+        <span class="inline-flex items-center gap-1.5">
+          <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+          <span>7 min read</span>
+        </span>
+        <span>•</span>
+        <span class="inline-flex items-center gap-1.5">
+          <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+          <span>EmergenceX Series</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- Main Title -->
+    <h1 class="font-nastaliq text-3xl sm:text-4xl md:text-5xl font-bold text-[var(--text-primary)] leading-[2] sm:leading-[2.2] mb-6">
+      مسلسل بڑھتی ہوئی تبدیلی کو کیسے روکیں؟
+      <span class="block text-xl sm:text-2xl font-serif-editorial font-normal text-[var(--accent)] mt-1" dir="ltr">
+        Balancing Feedback: When the System Acts to Close the Gap
+      </span>
+    </h1>
+
+    <div class="p-6 rounded-2xl bg-[var(--bg-card)] border-r-4 border-r-blue-600 border border-[var(--bg-card-border)] mb-6 shadow-xs">
+      <h3 class="font-arabic-ui font-bold text-lg sm:text-xl text-blue-700 dark:text-blue-400 mb-2">
+        متوازن فیڈبیک (Balancing Feedback): جب نظام فرق کو کم کرنے کی کوشش کرے
+      </h3>
+      <p class="font-arabic-ui text-sm sm:text-base text-[var(--text-secondary)] leading-relaxed">
+        ہر تبدیلی ہمیشہ بڑھتی ہی نہیں رہتی۔ پچھلی قسط میں ہم نے دیکھا تھا کہ بعض اوقات ایک تبدیلی مزید تبدیلی پیدا کرتی ہے جسے ہم نے <span class="en-term">Reinforcing Feedback</span> کہا۔ لیکن اگر کوئی نظام اپنی مطلوبہ حالت سے دور ہونے لگے، تو کیا وہ دوبارہ اس کے قریب آنے کی کوشش کر سکتا ہے؟ جواب ہے: ہاں۔
+      </p>
+    </div>
+
+    <!-- Author & Lab Bio Strip -->
+    <div class="flex flex-wrap items-center justify-between gap-4 p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] shadow-xs">
+      <div class="flex items-center gap-3.5">
+        <div class="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-950 flex items-center justify-center text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900 font-serif-editorial text-lg font-bold">
+          MY
+        </div>
+        <div>
+          <h2 class="font-arabic-ui font-semibold text-sm sm:text-base text-[var(--text-primary)]">ڈاکٹر محمد یاسر</h2>
+          <p class="text-xs text-[var(--text-muted)] font-arabic-ui leading-normal">
+            چیئرمین، شعبہ کمپیوٹر سائنس | ڈائریکٹر: EmergenceX — انٹر ڈسپلنری کمپلیکسٹی سائنس لیب
+          </p>
+          <p class="text-[11px] text-[var(--text-muted)] font-arabic-ui">یونیورسٹی آف انجینئرنگ اینڈ ٹیکنالوجی (UET) لاہور، فیصل آباد کیمپس</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2" dir="ltr">
+        <button id="copy-citation-btn-8" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-arabic-ui bg-[var(--bg-card-subtle)] hover:bg-[var(--accent-subtle)] border border-[var(--bg-card-border)] text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors cursor-pointer" title="حوالہ نقل کریں">
+          <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+          <span>حوالہ نقل کریں</span>
+        </button>
+        <button id="share-lecture-btn-8" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-arabic-ui bg-[var(--bg-card-subtle)] hover:bg-[var(--accent-subtle)] border border-[var(--bg-card-border)] text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors cursor-pointer" title="شیئر کریں">
+          <i data-lucide="share-2" class="w-3.5 h-3.5"></i>
+          <span>شیئر</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Article Core Body -->
+  <div class="urdu-reading-text space-y-8 text-[var(--text-primary)]">
+    
+    <!-- Restaurant Management Example -->
+    <section class="my-10 p-6 sm:p-8 rounded-2xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] shadow-xs">
+      <h3 class="font-arabic-ui text-xl font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
+        <i data-lucide="utensils" class="w-5 h-5 text-[var(--accent)]"></i>
+        <span>اسے ایک سادہ مثال سے سمجھتے ہیں: ریسٹورنٹ کی سروس</span>
+      </h3>
+
+      <p class="text-base sm:text-lg leading-[2.4] mb-4">
+        فرض کریں ایک ریسٹورنٹ (<span class="en-term">Restaurant</span>) کی سروس خراب ہو جاتی ہے۔ صارفین ناخوش ہوتے ہیں اور شکایات (<span class="en-term">Complaints</span>) بڑھنے لگتی ہیں۔ اب انتظامیہ (<span class="en-term">Management</span>) کو محسوس ہوتا ہے کہ کچھ ٹھیک نہیں ہے۔ وہ مسئلے کو سمجھنے کی کوشش کرتی ہے اور اصلاحی اقدامات (<span class="en-term">Corrective Actions</span>) کرتی ہے۔ مثلاً:
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6" dir="rtl">
+        <div class="p-3.5 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)] text-center">
+          <span class="font-arabic-ui font-bold text-sm text-[var(--text-primary)]">عملے کی تربیت</span>
+          <p class="text-xs font-mono-code text-[var(--accent)] mt-1" dir="ltr">Staff Training</p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)] text-center">
+          <span class="font-arabic-ui font-bold text-sm text-[var(--text-primary)]">سروس میں بہتری</span>
+          <p class="text-xs font-mono-code text-[var(--accent)] mt-1" dir="ltr">Service Improvement</p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)] text-center">
+          <span class="font-arabic-ui font-bold text-sm text-[var(--text-primary)]">معیار کی نگرانی</span>
+          <p class="text-xs font-mono-code text-[var(--accent)] mt-1" dir="ltr">Quality Control</p>
+        </div>
+      </div>
+
+      <div class="p-5 rounded-xl bg-[var(--accent-subtle)] border border-[var(--accent-border)] space-y-2 font-arabic-ui font-semibold text-sm sm:text-base text-[var(--text-primary)]">
+        <p>• اگر یہ اقدامات مؤثر ہوں تو سروس بہتر ہو سکتی ہے۔</p>
+        <p>• اور بہتر سروس کے نتیجے میں صارفین کے منفی تجربات کم ہو سکتے ہیں۔</p>
+        <p>• اور جب منفی تجربات کم ہوں تو شکایات بھی کم ہو سکتی ہیں۔</p>
+      </div>
+
+      <p class="text-base sm:text-lg leading-[2.4] mt-6">
+        یہاں ایک اہم بات ہوئی: <strong>مسئلے کے ظاہر ہونے سے ایسی معلومات سامنے آئیں جن کی بنیاد پر نظام نے اصلاحی ردِعمل دیا۔</strong> یہی ہمیں متوازن فیڈبیک (<span class="en-term">Balancing Feedback</span>) کی طرف لے جاتا ہے۔
+      </p>
+    </section>
+
+    <!-- Definition of Balancing Feedback -->
+    <div class="my-10 p-6 sm:p-8 rounded-2xl bg-[var(--bg-card)] border-2 border-blue-600 shadow-md">
+      <div class="flex items-center gap-2 font-arabic-ui font-bold text-blue-600 dark:text-blue-400 text-lg mb-3">
+        <i data-lucide="balance" class="w-5 h-5"></i>
+        <span>متوازن فیڈبیک (Balancing Feedback) کیا ہے؟</span>
+      </div>
+      <blockquote class="p-5 rounded-xl bg-[var(--bg-card-subtle)] font-nastaliq text-xl sm:text-2xl leading-[2.4] text-[var(--text-primary)] mb-6">
+        "جب کسی نظام (System) کی موجودہ حالت (Current State) اور مطلوبہ حالت (Desired State) کے درمیان موجود فرق (Gap) ایک ایسا ردِعمل (Response) پیدا کرے جو اس فرق کو کم کرنے کی کوشش کرے، تو اسے متوازن فیڈبیک (Balancing Feedback) کہتے ہیں۔"
+      </blockquote>
+
+      <!-- Conceptual Gap Framework -->
+      <div class="grid grid-cols-1 sm:grid-cols-4 gap-3 text-center text-xs sm:text-sm font-arabic-ui" dir="rtl">
+        <div class="p-3.5 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)]">
+          <div class="text-[var(--text-muted)] text-[11px]">ہم کہاں ہونا چاہتے ہیں؟</div>
+          <div class="font-bold text-[var(--accent)] mt-1">مطلوبہ حالت (Desired State)</div>
+        </div>
+        <div class="p-3.5 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)]">
+          <div class="text-[var(--text-muted)] text-[11px]">ہم اس وقت کہاں ہیں؟</div>
+          <div class="font-bold text-[var(--text-primary)] mt-1">موجودہ حالت (Current State)</div>
+        </div>
+        <div class="p-3.5 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)]">
+          <div class="text-[var(--text-muted)] text-[11px]">دونوں میں کتنا تفاوت ہے؟</div>
+          <div class="font-bold text-rose-600 mt-1">فرق (Gap)</div>
+        </div>
+        <div class="p-3.5 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)]">
+          <div class="text-[var(--text-muted)] text-[11px]">فرق کو ختم کیسے کیا جائے؟</div>
+          <div class="font-bold text-emerald-600 mt-1">اصلاحی اقدام (Action)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case Study 2: Thermostat -->
+    <div class="p-6 rounded-2xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)]">
+      <h3 class="font-arabic-ui text-lg sm:text-xl font-bold text-[var(--text-primary)] mb-3 flex items-center gap-2">
+        <i data-lucide="thermometer" class="w-5 h-5 text-[var(--accent)]"></i>
+        <span>ایک کلاسک تکنیکی مثال: تھرموسٹیٹ (Thermostat)</span>
+      </h3>
+      <p class="text-base sm:text-lg leading-[2.4] mb-4">
+        فرض کریں آپ نے کمرے کا درجہ حرارت 24°C پر مقرر کیا ہے۔ یہ آپ کی مطلوبہ حالت (<span class="en-term">Desired State</span>) ہے۔ لیکن کسی وجہ سے کمرے کا درجہ حرارت بڑھ کر 28°C ہو جاتا ہے۔ یہ موجودہ حالت (<span class="en-term">Current State</span>) ہے۔ دونوں کے درمیان فرق 4°C کا ہے۔
+      </p>
+      <p class="text-base sm:text-lg leading-[2.4]">
+        اب تھرموسٹیٹ اس فرق کو محسوس کرتا ہے۔ پھر وہ ٹھنڈک کے نظام کو آن کرتا ہے۔ درجہ حرارت کم ہونا شروع ہوتا ہے اور کمرہ دوبارہ 24°C کے قریب پہنچ جاتا ہے۔ تھرموسٹیٹ یہ کارروائی مسلسل دہراتا رہتا ہے۔ یہ متوازن فیڈبیک لوپ کی سب سے جانی پہچانی مثال ہے۔
+      </p>
+    </div>
+
+    <!-- Why Agent-Based Modeling Matters in Balancing Loops -->
+    <section class="my-10 p-6 sm:p-8 rounded-2xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] shadow-xs">
+      <h3 class="font-arabic-ui text-xl font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
+        <i data-lucide="cpu" class="w-6 h-6 text-[var(--accent)]"></i>
+        <span>یہاں ایجنٹ بیسڈ ماڈلنگ (ABM) کیوں مفید ہے؟</span>
+      </h3>
+
+      <p class="text-base sm:text-lg leading-[2.4] mb-4">
+        اگر ہمیں صرف پورے سسٹم کے مجموعی فیڈبیک ڈھانچے کو سمجھنا ہو تو روایتی سسٹمز ڈائنامکس (<span class="en-term">System Dynamics</span>) کافی ہے۔ لیکن حقیقی دنیا میں لوگ ایک جیسے نہیں ہوتے:
+      </p>
+
+      <div class="p-5 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)] mb-6 space-y-2 text-sm sm:text-base font-arabic-ui">
+        <p>• مختلف گاہک مختلف تجربات رکھتے ہیں، اور مختلف حالات میں شکایت کرتے یا خاموش رہتے ہیں۔</p>
+        <p>• انتظامیہ ہر مسئلے کو فوراً نہیں دیکھتی، اور ہر شکایت پر فوری ردِعمل نہیں دیتی۔</p>
+      </div>
+
+      <p class="text-base sm:text-lg leading-[2.4] mb-4">
+        یہاں ایجنٹ بیسڈ ماڈلنگ میں ہم صارفین، عملہ اور مینجمنٹ کو الگ الگ ایجنٹس بنا کر کچھ رولز دیتے ہیں، مثلاً: <strong>"اگر شکایات ایک مخصوص حد (Threshold) سے بڑھ جائیں تو انتظامیہ اصلاحی اقدام کرے۔"</strong>
+      </p>
+
+      <!-- What-if experimental questions -->
+      <div class="p-5 rounded-xl bg-[var(--accent-subtle)] border border-[var(--accent-border)] font-arabic-ui font-semibold text-sm sm:text-base text-[var(--accent)] mb-4">
+        <p>• اگر انتظامیہ جلد ردِعمل دے تو نظام کے رویے میں کیا فرق آتا ہے؟</p>
+        <p>• اگر اصلاحی اقدام میں تاخیر ہو تو کیا مسئلہ بے قابو ہو سکتا ہے؟</p>
+      </div>
+
+      <div class="p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] text-center font-mono-code text-xs sm:text-sm text-[var(--text-primary)]" dir="ltr">
+        Individual Behaviours ➔ Interactions ➔ Feedback ➔ System-Level Patterns
+      </div>
+    </section>
+
+    <!-- Today's Core Lesson -->
+    <div class="my-10 p-8 rounded-2xl bg-[var(--bg-card)] border-2 border-[var(--accent)] text-center shadow-lg relative overflow-hidden">
+      <div class="w-12 h-12 rounded-full bg-[var(--accent-subtle)] text-[var(--accent)] mx-auto flex items-center justify-center mb-3">
+        <i data-lucide="bookmark" class="w-6 h-6"></i>
+      </div>
+      <span class="text-xs font-mono-code uppercase tracking-wider text-[var(--accent)] font-bold block mb-2" dir="ltr">
+        Core Principle
+      </span>
+      <h2 class="font-nastaliq text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--text-primary)] leading-[2.1] mb-4">
+        آج کی اصل بات
+      </h2>
+      <blockquote class="p-4 rounded-xl bg-[var(--bg-card-subtle)] border-r-4 border-r-[var(--accent)] font-nastaliq text-xl sm:text-2xl leading-[2.4] text-[var(--accent)] max-w-xl mx-auto mb-4">
+        "ہر تبدیلی ہمیشہ بڑھتی نہیں رہتی۔ سسٹم کے نتائج واپس معلومات فراہم کرتے ہیں، جن کی بنیاد پر ایسا ردِعمل پیدا ہوتا ہے جو نظام کو مطلوبہ حالت کے قریب لانے کی کوشش کرتا ہے۔"
+      </blockquote>
+    </div>
+
+    <!-- Teaser for Next Episode -->
+    <div class="p-6 rounded-2xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)] mb-8">
+      <h4 class="font-arabic-ui font-bold text-base text-[var(--accent)] mb-2">اگلی قسط کی جھلک:</h4>
+      <p class="font-arabic-ui text-sm sm:text-base leading-relaxed text-[var(--text-secondary)]">
+        لیکن حقیقی دنیا کے سسٹم اکثر ایک ہی فیڈبیک لوپ سے نہیں چلتے۔ کیا ایک ہی سسٹم میں ایک سے زیادہ فیڈبیک لوپس ایک ساتھ کام کر سکتے ہیں؟ اگلی قسط: <strong>ایک سسٹم، کئی فیڈبیک لوپ (One System, Multiple Feedback Loops)</strong>۔
+      </p>
+    </div>
+
+    <!-- Academic References -->
+    <section class="my-12 pt-8 border-t border-[var(--border-subtle)]" dir="ltr">
+      <div class="flex items-center justify-between mb-6">
+        <h3 class="font-serif-editorial text-xl sm:text-2xl font-bold text-[var(--text-primary)] flex items-center gap-2">
+          <i data-lucide="book-open" class="w-5 h-5 text-[var(--accent)]"></i>
+          <span>Academic References</span>
+        </h3>
+        <span class="text-xs font-mono-code text-[var(--text-muted)]">Systems Dynamics Literature</span>
+      </div>
+
+      <div class="space-y-4 font-mono-code text-xs sm:text-sm">
+        <div class="p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)]">
+          <p class="text-[var(--text-primary)] font-medium leading-relaxed">
+            Meadows, D. H. (2008). 
+            <span class="font-semibold text-[var(--accent)]">Thinking in Systems: A Primer.</span> 
+            Chelsea Green Publishing.
+          </p>
+        </div>
+        <div class="p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)]">
+          <p class="text-[var(--text-primary)] font-medium leading-relaxed">
+            Sterman, J. D. (2000). 
+            <span class="font-semibold text-[var(--accent)]">Business Dynamics: Systems Thinking and Modeling for a Complex World.</span> 
+            McGraw-Hill/Irwin.
+          </p>
+        </div>
+        <div class="p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)]">
+          <p class="text-[var(--text-primary)] font-medium leading-relaxed">
+            Swinerd, C., & McNaught, K. R. (2012). 
+            <span class="font-semibold text-[var(--accent)]">Design classes for hybrid simulations involving agent-based and system dynamics models.</span> 
+            <em>Simulation Modelling Practice and Theory</em>, 25, 118–133.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tags -->
+    <div class="my-8 pt-6 border-t border-[var(--border-subtle)] text-right">
+      <div class="flex flex-wrap items-center justify-end gap-2" dir="ltr">
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#BalancingFeedback</span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#SystemsThinking</span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#AgentBasedModeling</span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#FeedbackLoops</span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#EmergenceX</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom Navigation: Prev Lecture 7 / Next Lecture 9 -->
+  <footer class="mt-14 pt-8 border-t border-[var(--border-subtle)]">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" dir="rtl">
+      <div 
+        hx-get="/lectures/lecture-7.html" 
+        hx-target="#main-content" 
+        hx-swap="innerHTML transition:true"
+        hx-push-url="?lecture=7"
+        class="group p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] hover:border-[var(--accent-border)] transition-all cursor-pointer shadow-2xs"
+      >
+        <div class="flex items-center gap-2 text-xs font-arabic-ui text-[var(--text-muted)] mb-1">
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform"></i>
+          <span>گزشتہ لیکچر 07</span>
+        </div>
+        <h4 class="font-arabic-ui font-semibold text-sm text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors">
+          نتیجہ ہمیشہ کہانی کا اختتام نہیں ہوتا (Reinforcing Feedback)
+        </h4>
+      </div>
+
+      <div 
+        hx-get="/lectures/lecture-9.html" 
+        hx-target="#main-content" 
+        hx-swap="innerHTML transition:true"
+        hx-push-url="?lecture=9"
+        class="group p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] hover:border-[var(--accent-border)] transition-all cursor-pointer shadow-2xs text-left"
+        dir="ltr"
+      >
+        <div class="flex items-center justify-end gap-2 text-xs font-arabic-ui text-[var(--text-muted)] mb-1" dir="rtl">
+          <span>اگلا لیکچر 09</span>
+          <i data-lucide="arrow-left" class="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform"></i>
+        </div>
+        <h4 class="font-arabic-ui font-semibold text-sm text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors text-right" dir="rtl">
+          اب ہم سسٹمز کو کمپیوٹر میں ماڈل اور تجربہ کریں گے (From Systems Thinking to Computational Modeling)
+        </h4>
+      </div>
+    </div>
+  </footer>
+</article>

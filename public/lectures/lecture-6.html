@@ -1,0 +1,406 @@
+<article id="lecture-6-article" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12" dir="rtl" lang="ur">
+  <!-- Article Header Meta -->
+  <header class="mb-10 pb-8 border-b border-[var(--border-subtle)] text-right">
+    <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[var(--accent-subtle)] border border-[var(--accent-border)] text-sm font-arabic-ui text-[var(--accent)] font-medium">
+        <i data-lucide="sparkles" class="w-4 h-4"></i>
+        <span>سلسلہ سسٹمز تھنکنگ و پیچیدگی — لیکچر 06</span>
+      </div>
+
+      <div class="flex items-center gap-3 text-xs font-mono-code text-[var(--text-muted)]" dir="ltr">
+        <span class="inline-flex items-center gap-1.5">
+          <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+          <span>6 min read</span>
+        </span>
+        <span>•</span>
+        <span class="inline-flex items-center gap-1.5">
+          <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+          <span>EmergenceX Series</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- Main Title -->
+    <h1 class="font-nastaliq text-3xl sm:text-4xl md:text-5xl font-bold text-[var(--text-primary)] leading-[2] sm:leading-[2.2] mb-6">
+      کیا ایک خلیے (Cell) کے رویّے سے پورے ٹیومر کی کہانی سمجھی جا سکتی ہے؟
+      <span class="block text-xl sm:text-2xl font-serif-editorial font-normal text-[var(--accent)] mt-1" dir="ltr">
+        Complexity & Agent-Based Modeling in Cancer Biology: Single-Cell to Tumor Mass
+      </span>
+    </h1>
+
+    <p class="font-arabic-ui text-base sm:text-lg text-[var(--text-secondary)] leading-relaxed mb-6">
+      خلیاتی ناہمواری (Heterogeneity)، مصنوعی ٹشو سیمولیشنز، اور یہ سوال کہ کیا چھوٹے حیاتیاتی مفروضے بدلنے سے کینسر کے مجموعی پیٹرنز بدل جاتے ہیں؟
+    </p>
+
+    <!-- Author & Lab Bio Strip -->
+    <div class="flex flex-wrap items-center justify-between gap-4 p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] shadow-xs">
+      <div class="flex items-center gap-3.5">
+        <div class="w-12 h-12 rounded-full bg-rose-100 dark:bg-rose-950 flex items-center justify-center text-rose-700 dark:text-rose-300 border border-rose-200 dark:border-rose-900 font-serif-editorial text-lg font-bold">
+          MY
+        </div>
+        <div>
+          <h2 class="font-arabic-ui font-semibold text-sm sm:text-base text-[var(--text-primary)]">ڈاکٹر محمد یاسر</h2>
+          <p class="text-xs text-[var(--text-muted)] font-arabic-ui leading-normal">
+            چیئرمین، شعبہ کمپیوٹر سائنس | بانی ڈائریکٹر: EmergenceX — انٹر ڈسپلنری کمپلیکسٹی سائنس لیب
+          </p>
+          <p class="text-[11px] text-[var(--text-muted)] font-arabic-ui">یونیورسٹی آف انجینئرنگ اینڈ ٹیکنالوجی (UET) لاہور، فیصل آباد کیمپس</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2" dir="ltr">
+        <button id="copy-citation-btn-6" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-arabic-ui bg-[var(--bg-card-subtle)] hover:bg-[var(--accent-subtle)] border border-[var(--bg-card-border)] text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors cursor-pointer" title="حوالہ نقل کریں">
+          <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+          <span>حوالہ نقل کریں</span>
+        </button>
+        <button id="share-lecture-btn-6" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-arabic-ui bg-[var(--bg-card-subtle)] hover:bg-[var(--accent-subtle)] border border-[var(--bg-card-border)] text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors cursor-pointer" title="شیئر کریں">
+          <i data-lucide="share-2" class="w-3.5 h-3.5"></i>
+          <span>شیئر</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Editorial Conceptual Scientific Infographic -->
+  <figure class="mb-12">
+    <div class="relative overflow-hidden rounded-2xl border border-[var(--bg-card-border)] shadow-md bg-stone-900 group">
+      <img 
+        src="/assets/lecture_tumor_abm_diagram.jpg" 
+        alt="Agent-Based Modeling in Cancer Biology and Computational Oncology" 
+        class="w-full h-auto object-cover max-h-[520px] transition-transform duration-700 ease-out group-hover:scale-[1.01]"
+        loading="eager"
+      />
+      <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent p-4 sm:p-6 text-white text-right">
+        <span class="inline-block px-2.5 py-0.5 mb-1.5 rounded text-[11px] font-mono-code bg-rose-500/20 text-rose-300 border border-rose-500/30">
+          علمی خاکہ (Scientific Infographic)
+        </span>
+        <p class="font-arabic-ui text-xs sm:text-sm text-stone-200 leading-relaxed">
+          بائیں جانب: ایک انفرادی خلیہ بطورِ خودمختار ایجنٹ (<span class="text-amber-300 font-semibold">Autonomous Cell Agent</span>) | دائیں جانب: ورچوئل ٹشو میں ٹیومر کی ملٹی اسکیل سیمولیشن (<span class="text-rose-300 font-semibold">Emergent Multi-scale Tumor Mass</span>)
+        </p>
+      </div>
+    </div>
+    <figcaption class="mt-2 text-left text-xs font-mono-code text-[var(--text-muted)] flex items-center justify-between px-2" dir="ltr">
+      <span>Figure 6.1 — Multi-scale Agent-Based Modeling of Tumor Microenvironment</span>
+      <span class="italic text-[11px]">Infographic is made with AI assistance</span>
+    </figcaption>
+  </figure>
+
+  <!-- Article Core Body -->
+  <div class="urdu-reading-text space-y-8 text-[var(--text-primary)]">
+    
+    <!-- Opening Paradox -->
+    <div class="p-6 rounded-xl bg-[var(--bg-card)] border-r-4 border-r-[var(--accent)] border border-[var(--bg-card-border)] shadow-xs">
+      <p class="text-base sm:text-lg leading-[2.4]">
+        بظاہر ایک ٹیومر بہت سے خلیوں کا مجموعہ ہوتا ہے۔ مگر حقیقت اس سے کہیں زیادہ پیچیدہ ہے۔
+        ٹیومر کے تمام خلیے ایک جیسے نہیں ہوتے۔ ان کی خصوصیات مختلف ہو سکتی ہیں، اور حالات بدلنے کے ساتھ ان کا رویّہ بھی بدل سکتا ہے۔ وہ ایک دوسرے پر اثر انداز ہوتے ہیں اور اپنے اردگرد کے ماحول سے بھی متاثر ہوتے ہیں۔
+      </p>
+    </div>
+
+    <!-- The Fundamental Scientific Question -->
+    <div class="my-8">
+      <h3 class="font-arabic-ui text-xl sm:text-2xl font-bold text-[var(--accent)] mb-4 flex items-center gap-2">
+        <i data-lucide="help-circle" class="w-5 h-5"></i>
+        <span>بنیادی ریسرچ سوال: مائیکرو سے میکرو پیٹرنز کیسے جنم لیتے ہیں؟</span>
+      </h3>
+      <p class="text-base sm:text-lg leading-[2.4]">
+        اب سوال یہ ہے: اگر ہم ہر خلیے کے رویّے اور دوسرے خلیوں کے ساتھ اس کے باہمی اثرات کو ایک 
+        <span class="en-term">Computational Model</span> 
+        میں شامل کریں، تو کیا ہم سمجھ سکتے ہیں کہ ان سے پورے ٹیومر کے بڑے پیٹرن (<span class="en-term">Patterns</span>) کیسے پیدا ہوتے ہیں؟
+      </p>
+      <div class="p-4 rounded-xl bg-[var(--accent-subtle)] border border-[var(--accent-border)] font-arabic-ui font-bold text-base sm:text-lg text-[var(--accent)] mt-4">
+        یہی وہ جگہ ہے جہاں ایجنٹ بیسڈ ماڈلنگ (Agent-Based Modeling) بنیادی اہمیت اختیار کر جاتی ہے۔
+      </div>
+    </div>
+
+    <!-- How ABM works in Cancer Research -->
+    <section class="my-10 p-6 sm:p-8 rounded-2xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] shadow-xs">
+      <div class="flex items-center justify-between border-b border-[var(--border-subtle)] pb-4 mb-6">
+        <h3 class="font-arabic-ui text-xl sm:text-2xl font-bold text-[var(--text-primary)] flex items-center gap-2.5">
+          <i data-lucide="cpu" class="w-6 h-6 text-[var(--accent)]"></i>
+          <span>ایجنٹ بیسڈ ماڈلنگ میں خلیہ بطورِ ایجنٹ</span>
+        </h3>
+        <span class="text-xs font-mono-code px-2.5 py-1 rounded bg-[var(--bg-card-subtle)] text-[var(--text-muted)]" dir="ltr">
+          Single-Cell Computational Agent
+        </span>
+      </div>
+
+      <p class="text-base sm:text-lg leading-[2.4] mb-6">
+        ایجنٹ بیسڈ ماڈلنگ میں، تحقیق کے سوال کے مطابق، انفرادی خلیوں کو کمپیوٹر میں الگ الگ ایجنٹ (<span class="en-term">agents</span>) کے طور پر ماڈل (<span class="en-term">model</span>) کیا جا سکتا ہے۔ پھر ہم یہ دریافت کرتے ہیں کہ مختلف حالات میں یہ خلیے کس طرح برتاؤ (<span class="en-term">behave</span>) کرتے ہیں، ایک دوسرے پر کیسے اثر انداز ہوتے ہیں، اور اپنے ماحول سے کیسے متاثر ہوتے ہیں۔
+      </p>
+
+      <!-- Thought Experiment: Virtual Tissue -->
+      <div class="p-6 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)] mb-6">
+        <h4 class="font-arabic-ui font-bold text-base sm:text-lg text-[var(--text-primary)] mb-2 flex items-center gap-2">
+          <i data-lucide="sparkles" class="w-4 h-4 text-[var(--accent)]"></i>
+          <span>ذرا تصور کیجیے: ایک ورچوئل ٹشو کا منظر</span>
+        </h4>
+        <p class="text-base sm:text-lg leading-[2.4]">
+          ایک مصنوعی ٹشو (<span class="en-term">virtual tissue</span>) میں بہت سے خلیے موجود ہیں۔ ہر خلیہ اپنے اردگرد کے ماحول اور دوسرے خلیوں کے ساتھ تعامل (<span class="en-term">interact</span>) کر رہا ہے۔
+        </p>
+        <p class="text-base sm:text-lg leading-[2.4] mt-3">
+          اب ایک دلچسپ سوال پیدا ہوتا ہے: اگر ماڈل میں خلیوں کے روئیے (<span class="en-term">behaviour</span>) یا ان کے باہمی تعامل (<span class="en-term">interactions</span>) سے متعلق مفروضے (<span class="en-term">assumptions</span>) بدل دیئے جائیں، تو کیا مصنوعی ٹیومر (<span class="en-term">simulated tumour</span>) کے مجموعی پیٹرنز (<span class="en-term">patterns</span>) بھی بدل سکتے ہیں؟
+        </p>
+        <div class="mt-4 p-3 rounded-lg bg-[var(--bg-card)] border border-[var(--bg-card-border)] font-semibold text-[var(--accent)]">
+          یہی وہ سوال ہے جسے ریسرچرز ایجنٹ بیسڈ ماڈلنگ کی مدد سے دریافت کرتے ہیں۔
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE "WHAT IF?" HYPOTHESIS TESTER -->
+    <div class="my-10 p-6 sm:p-8 rounded-2xl bg-[var(--bg-card)] border-2 border-[var(--accent-border)] shadow-md">
+      <div class="flex items-center justify-between border-b border-[var(--border-subtle)] pb-4 mb-6">
+        <div>
+          <h3 class="font-arabic-ui text-xl font-bold text-[var(--text-primary)] flex items-center gap-2">
+            <i data-lucide="sliders" class="w-5 h-5 text-[var(--accent)]"></i>
+            <span>انٹرایکٹو سیمولیشن: "What if?" حیاتیاتی مفروضوں کی آزمائش</span>
+          </h3>
+          <p class="text-xs sm:text-sm text-[var(--text-muted)] font-arabic-ui mt-1">
+            مختلف حیاتیاتی مفروضے منتخب کر کے دیکھیں کہ کمپیوٹر ماڈل میں ٹیومر کے مجموعی نتائج کیسے تبدیل ہوتے ہیں:
+          </p>
+        </div>
+        <span class="text-xs font-mono-code px-2.5 py-1 rounded bg-[var(--accent-subtle)] text-[var(--accent)]" dir="ltr">
+          In Silico Testing
+        </span>
+      </div>
+
+      <!-- Scenarios Selector Buttons -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6" dir="rtl">
+        <button id="hypo-btn-1" class="py-3 px-4 text-right rounded-xl font-arabic-ui text-xs sm:text-sm font-semibold transition-all bg-[var(--accent)] text-white shadow-xs cursor-pointer">
+          1. آکسیجن کی قلت (Hypoxia)
+        </button>
+        <button id="hypo-btn-2" class="py-3 px-4 text-right rounded-xl font-arabic-ui text-xs sm:text-sm font-semibold transition-all bg-[var(--bg-card-subtle)] hover:bg-[var(--accent-subtle)] border border-[var(--bg-card-border)] text-[var(--text-secondary)] hover:text-[var(--accent)] cursor-pointer">
+          2. مدافعتی خلیوں (T-Cells) کا حملہ
+        </button>
+        <button id="hypo-btn-3" class="py-3 px-4 text-right rounded-xl font-arabic-ui text-xs sm:text-sm font-semibold transition-all bg-[var(--bg-card-subtle)] hover:bg-[var(--accent-subtle)] border border-[var(--bg-card-border)] text-[var(--text-secondary)] hover:text-[var(--accent)] cursor-pointer">
+          3. میٹاسٹیسز (خلیاتی نقل مکانی)
+        </button>
+      </div>
+
+      <!-- Dynamic Hypothesis Result Box -->
+      <div id="hypo-display-box" class="p-6 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)] transition-all">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-xs font-mono-code px-2 py-0.5 rounded bg-rose-500/15 text-rose-700 dark:text-rose-300 border border-rose-500/30" dir="ltr">
+            Biological Parameter: Oxygen Gradient
+          </span>
+          <span class="text-xs font-arabic-ui text-[var(--text-muted)]">مفروضہ برائے خلیاتی بقا</span>
+        </div>
+        <h4 class="font-arabic-ui font-bold text-base sm:text-lg text-[var(--text-primary)] mb-2">
+          نتیجہ: مرکزی مردہ کور (Necrotic Core) کا ظہور
+        </h4>
+        <p class="text-sm sm:text-base font-arabic-ui leading-relaxed text-[var(--text-secondary)]">
+          جب خلیاتی ایجنٹس کے قوانین میں یہ اصول طے کیا جاتا ہے کہ آکسیجن کی سطح 0.02 سے کم ہونے پر خلیہ ہلاک ہو جائے گا، تو سیمولیشن میں بیرونی خلیے تیزی سے پھیلتے ہیں جبکہ اندرونی خلیے مر کر نیوکروٹک کور بناتے ہیں۔ یہ پیٹرن بغیر کسی بیرونی ہدایت کے خود بخود (Emergent) وجود میں آتا ہے۔
+        </p>
+      </div>
+    </div>
+
+    <!-- The Advantage of Agent-Based Modeling -->
+    <div class="my-8">
+      <h3 class="font-arabic-ui text-xl sm:text-2xl font-bold text-[var(--text-primary)] mb-4">
+        ایجنٹ بیسڈ ماڈلنگ کا فائدہ کیا ہے؟
+      </h3>
+      <p class="text-base sm:text-lg leading-[2.4] mb-4">
+        اس کے ذریعے ہم مختلف حیاتیاتی مفروضوں (<span class="en-term">biological hypotheses</span>) اور ممکنہ میکانزمز (<span class="en-term">mechanisms</span>) پر کمپیوٹر سیمولیشن (<span class="en-term">simulation</span>) میں تحقیق کر سکتے ہیں۔
+      </p>
+      <p class="text-base sm:text-lg leading-[2.4]">
+        مختلف مفروضوں (<span class="en-term">assumptions</span>) کے تحت <strong class="text-[var(--accent)] font-semibold">“What if?” scenarios</strong> آزما کر ہم یہ سمجھنے کی کوشش کر سکتے ہیں کہ کسی تبدیلی کے نتیجے میں پورے سسٹم کے پیٹرنز (<span class="en-term">patterns</span>) کس طرح بدل سکتے ہیں۔
+      </p>
+    </div>
+
+    <!-- Epistemological Humility & Scientific Validation -->
+    <div class="my-10 p-6 sm:p-8 rounded-2xl bg-amber-500/10 border-r-4 border-r-amber-500 border border-amber-500/20 text-[var(--text-primary)]">
+      <div class="flex items-center gap-2 font-arabic-ui font-bold text-amber-700 dark:text-amber-400 mb-3 text-lg">
+        <i data-lucide="shield-alert" class="w-5 h-5"></i>
+        <span>ایک بنیادی اور لازمی سائنسی اصول (Scientific Reality Check)</span>
+      </div>
+
+      <p class="text-lg sm:text-xl font-bold leading-[2.4] mb-3">
+        لیکن ایک بات ہمیشہ یاد رکھنی چاہیے:
+      </p>
+
+      <blockquote class="p-4 rounded-xl bg-[var(--bg-card)] border-r-4 border-r-[var(--accent)] font-nastaliq text-xl sm:text-2xl leading-[2.4] text-[var(--accent)] mb-4">
+        "کوئی کمپیوٹیشنل ماڈل (computational model) خود کینسر (cancer) نہیں ہوتا۔"
+      </blockquote>
+
+      <p class="text-base sm:text-lg leading-[2.4] mb-4">
+        وہ حقیقت کی ایک محدود نمائندگی (<span class="en-term">representation</span>) ہوتا ہے، جو ہماری موجودہ سائنسی سمجھ بوجھ (<span class="en-term">scientific understanding</span>) اور دستیاب شہادتوں (<span class="en-term">available evidence</span>) کی بنیاد پر بنائی جاتی ہے۔
+      </p>
+
+      <div class="p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] font-arabic-ui text-sm sm:text-base text-[var(--text-primary)] leading-relaxed">
+        <strong>اسی لیے ایسے ماڈلز کے لیے درستگی کے معیار کا تصدیق شدہ ہونا (<span class="en-term">validation & calibration</span>) بنیادی ترین اہمیت رکھتا ہے۔</strong>
+      </div>
+    </div>
+
+    <!-- Today's Core Lesson: Complexity in Cancer -->
+    <div class="my-10 p-8 rounded-2xl bg-[var(--bg-card)] border-2 border-[var(--accent)] text-center shadow-lg relative overflow-hidden">
+      <div class="w-12 h-12 rounded-full bg-[var(--accent-subtle)] text-[var(--accent)] mx-auto flex items-center justify-center mb-3">
+        <i data-lucide="bookmark" class="w-6 h-6"></i>
+      </div>
+
+      <span class="text-xs font-mono-code uppercase tracking-wider text-[var(--accent)] font-bold block mb-2" dir="ltr">
+        Core Insight
+      </span>
+
+      <h2 class="font-nastaliq text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--text-primary)] leading-[2.1] mb-4">
+        آج کی اصل بات
+      </h2>
+
+      <p class="font-arabic-ui text-base sm:text-lg text-[var(--text-secondary)] max-w-2xl mx-auto leading-relaxed mb-6">
+        ہم ایک خلیے کو الگ سے سمجھ سکتے ہیں۔ لیکن جب بہت سے مختلف خلیے ایک دوسرے اور اپنے ماحول کے ساتھ تعامل (<span class="en-term">interact</span>) کرتے ہیں، تو ان کے باہمی اثرات (<span class="en-term">interactions</span>) سے کون سے بڑے پیٹرنز (<span class="en-term">patterns</span>) پیدا ہوتے ہیں؟
+      </p>
+
+      <div class="inline-block py-3 px-6 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)] font-mono-code text-base sm:text-lg text-[var(--accent)] font-bold shadow-2xs" dir="ltr">
+        Complexity Science = The Emergence of Whole from Interacting Cell Agents
+      </div>
+
+      <p class="font-arabic-ui text-base sm:text-lg font-semibold text-[var(--text-primary)] mt-6 max-w-xl mx-auto leading-relaxed">
+        اور ایجنٹ بیسڈ ماڈلنگ ہمیں ایسے سوالات کے جوابات کمپیوٹر کے ذریعے دریافت کرنے کا ایک موثر سائنسی طریقہ فراہم کرتی ہے۔
+      </p>
+    </div>
+
+    <!-- Research Collaboration Callout -->
+    <section class="my-10 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-rose-950/20 via-[var(--bg-card)] to-[var(--bg-card-subtle)] border-2 border-rose-500/30">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="p-2.5 rounded-xl bg-rose-500/20 text-rose-600 dark:text-rose-400">
+          <i data-lucide="users" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <h3 class="font-arabic-ui text-xl font-bold text-[var(--text-primary)]">تحقیقی تعاون کی دعوت (Research Collaboration)</h3>
+          <p class="text-xs font-mono-code text-rose-600 dark:text-rose-400">EmergenceX Interdisciplinary Complexity Science Lab</p>
+        </div>
+      </div>
+
+      <p class="font-arabic-ui text-base sm:text-lg leading-[2.4] text-[var(--text-primary)] mb-6">
+        <strong>EmergenceX Lab</strong> میں ہم کینسر سے متعلق پیچیدہ مسائل پر کام کرنے والے ریسرچرز، آنکولوجسٹس، اور بائیو میڈیکل ماہرین کو مشترکہ تحقیق کی دعوت دیتے ہیں۔ ہم کمپیوٹیشنل ماڈلنگ اور ملٹی اسکیل سیمولیشنز کے ذریعے تجرباتی ڈیٹا کو ریاضیاتی و ایجنٹ بیسڈ فریم ورک میں ڈھالنے کے لیے حاضر ہیں۔
+      </p>
+
+      <div class="flex items-center gap-3 flex-wrap" dir="ltr">
+        <a href="mailto:yasir@uet.edu.pk" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[var(--accent)] text-white hover:bg-[var(--accent-hover)] font-arabic-ui text-xs sm:text-sm font-semibold transition-all cursor-pointer shadow-xs">
+          <i data-lucide="send" class="w-4 h-4"></i>
+          <span>رابطہ برائے مشترکہ تحقیق</span>
+        </a>
+        <span class="text-xs font-mono-code text-[var(--text-muted)]">UET Lahore Faisalabad Campus</span>
+      </div>
+    </section>
+
+    <!-- Academic References & Scholarly Citations Section -->
+    <section class="my-12 pt-8 border-t border-[var(--border-subtle)]" dir="ltr">
+      <div class="flex items-center justify-between mb-6">
+        <h3 class="font-serif-editorial text-xl sm:text-2xl font-bold text-[var(--text-primary)] flex items-center gap-2">
+          <i data-lucide="book-open" class="w-5 h-5 text-[var(--accent)]"></i>
+          <span>References & Oncology Literature</span>
+        </h3>
+        <span class="text-xs font-mono-code text-[var(--text-muted)]">Peer-Reviewed Papers</span>
+      </div>
+
+      <div class="space-y-4 font-mono-code text-xs sm:text-sm">
+        <!-- Citation 1 -->
+        <div class="p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] hover:border-[var(--accent-border)] transition-colors">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <p class="text-[var(--text-primary)] font-medium leading-relaxed">
+                Metzcar, J., Wang, Y., Heiland, R., & Macklin, P. (2019). 
+                <span class="font-semibold text-[var(--accent)]">A Review of Cell-Based Computational Modeling in Cancer Biology.</span> 
+                <em>JCO Clinical Cancer Informatics</em>, 3, 1–13.
+              </p>
+            </div>
+            <a href="https://doi.org/10.1200/CCI.18.00069" target="_blank" rel="noopener noreferrer" class="p-1.5 rounded-md hover:bg-[var(--bg-card-subtle)] text-[var(--text-muted)] hover:text-[var(--accent)] shrink-0 transition-colors" title="DOI Link">
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Citation 2 -->
+        <div class="p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] hover:border-[var(--accent-border)] transition-colors">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <p class="text-[var(--text-primary)] font-medium leading-relaxed">
+                Norton, K.-A., Gong, C., Jamalian, S., & Popel, A. S. (2019). 
+                <span class="font-semibold text-[var(--accent)]">Multiscale Agent-Based and Hybrid Modeling of the Tumor Immune Microenvironment.</span> 
+                <em>Processes</em>, 7(1), 37.
+              </p>
+            </div>
+            <a href="https://doi.org/10.3390/pr7010037" target="_blank" rel="noopener noreferrer" class="p-1.5 rounded-md hover:bg-[var(--bg-card-subtle)] text-[var(--text-muted)] hover:text-[var(--accent)] shrink-0 transition-colors" title="DOI Link">
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Citation 3 -->
+        <div class="p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] hover:border-[var(--accent-border)] transition-colors">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <p class="text-[var(--text-primary)] font-medium leading-relaxed">
+                Cogno, N., Axenie, C., Bauer, R., & Vavourakis, V. (2024). 
+                <span class="font-semibold text-[var(--accent)]">Agent-Based Modeling in Cancer Biomedicine: Applications and Tools for Calibration and Validation.</span> 
+                <em>Cancer Biology & Therapy</em>, 25(1), 2344600.
+              </p>
+            </div>
+            <a href="https://doi.org/10.1080/15384047.2024.2344600" target="_blank" rel="noopener noreferrer" class="p-1.5 rounded-md hover:bg-[var(--bg-card-subtle)] text-[var(--text-muted)] hover:text-[var(--accent)] shrink-0 transition-colors" title="DOI Link">
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Tags -->
+    <div class="my-8 pt-6 border-t border-[var(--border-subtle)] text-right">
+      <div class="flex flex-wrap items-center justify-end gap-2" dir="ltr">
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#ComplexityScience</span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#AgentBasedModeling</span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#CancerResearch</span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#ComputationalOncology</span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#ComputerScience</span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#InterdisciplinaryResearch</span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#SystemsThinking</span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#EmergenceX</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom Navigation: Ordered Sequence Prev (Lecture 4/5) / Next (Lecture 7) -->
+  <footer class="mt-14 pt-8 border-t border-[var(--border-subtle)]">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" dir="rtl">
+      <!-- Previous Lecture Button -->
+      <div 
+        hx-get="/lectures/lecture-4.html" 
+        hx-target="#main-content" 
+        hx-swap="innerHTML transition:true"
+        hx-push-url="?lecture=4"
+        class="group p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] hover:border-[var(--accent-border)] transition-all cursor-pointer shadow-2xs"
+      >
+        <div class="flex items-center gap-2 text-xs font-arabic-ui text-[var(--text-muted)] mb-1">
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform"></i>
+          <span>گزشتہ مطالعہ: لیکچر 04</span>
+        </div>
+        <h4 class="font-arabic-ui font-semibold text-sm sm:text-base text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors">
+          پیچیدگی اور ایجنٹ بیسڈ ماڈلنگ (جہاز و ہوابازی)
+        </h4>
+        <span class="inline-block mt-1 text-[11px] font-mono-code text-[var(--accent)]">
+          [Complicated vs Complex]
+        </span>
+      </div>
+
+      <!-- Next Lecture Button -->
+      <div 
+        hx-get="/lectures/lecture-7.html" 
+        hx-target="#main-content" 
+        hx-swap="innerHTML transition:true"
+        hx-push-url="?lecture=7"
+        class="group p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] hover:border-[var(--accent-border)] transition-all cursor-pointer shadow-2xs text-left"
+        dir="ltr"
+      >
+        <div class="flex items-center justify-end gap-2 text-xs font-arabic-ui text-[var(--text-muted)] mb-1" dir="rtl">
+          <span>اگلا مطالعہ: لیکچر 07</span>
+          <i data-lucide="arrow-left" class="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform"></i>
+        </div>
+        <h4 class="font-arabic-ui font-semibold text-sm sm:text-base text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors text-right" dir="rtl">
+          نتیجہ ہمیشہ کہانی کا اختتام نہیں ہوتا (Reinforcing Feedback)
+        </h4>
+        <span class="inline-block mt-1 text-[11px] font-mono-code text-emerald-600 dark:text-emerald-400 text-right w-full block" dir="rtl">
+          [Active Now in Series]
+        </span>
+      </div>
+    </div>
+  </footer>
+</article>

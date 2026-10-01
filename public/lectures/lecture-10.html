@@ -1,0 +1,369 @@
+<article id="lecture-10-article" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12" dir="rtl" lang="ur">
+  <!-- Article Header Meta -->
+  <header class="mb-10 pb-8 border-b border-[var(--border-subtle)] text-right">
+    <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-500/15 border border-indigo-500/30 text-sm font-arabic-ui text-indigo-700 dark:text-indigo-400 font-medium">
+        <i data-lucide="wrench" class="w-4 h-4"></i>
+        <span>سلسلہ سسٹمز تھنکنگ و پیچیدگی — لیکچر 10</span>
+      </div>
+
+      <div class="flex items-center gap-3 text-xs font-mono-code text-[var(--text-muted)]" dir="ltr">
+        <span class="inline-flex items-center gap-1.5">
+          <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+          <span>9 min read</span>
+        </span>
+        <span>•</span>
+        <span class="inline-flex items-center gap-1.5">
+          <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+          <span>EmergenceX Series</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- Main Title -->
+    <h1 class="font-nastaliq text-3xl sm:text-4xl md:text-5xl font-bold text-[var(--text-primary)] leading-[2] sm:leading-[2.2] mb-6">
+      ایجنٹ بیسڈ ماڈلنگ (ABM) شروع کرنی ہے—لیکن کس Tool سے؟
+      <span class="block text-xl sm:text-2xl font-serif-editorial font-normal text-[var(--accent)] mt-1" dir="ltr">
+        Selecting the Right ABM Framework: NetLogo, Mesa, GAMA, Repast & AnyLogic
+      </span>
+    </h1>
+
+    <div class="p-6 rounded-2xl bg-[var(--bg-card)] border-r-4 border-r-indigo-600 border border-[var(--bg-card-border)] mb-6 shadow-xs">
+      <h3 class="font-arabic-ui font-bold text-lg text-indigo-700 dark:text-indigo-400 mb-2">
+        Right Tool = The tool that fits the problem, purpose, and requirements
+      </h3>
+      <p class="font-arabic-ui text-sm sm:text-base text-[var(--text-secondary)] leading-relaxed">
+        گزشتہ لیکچر میں ہم نے دیکھا کہ ایک ماڈل میں <strong>(Agents) + (Rules) + (Interactions) + (Environment)</strong> مل کر ایک مصنوعی نظام تشکیل دے سکتے ہیں۔ لیکن اب سوال یہ ہے کہ ہم ایسا ماڈل کس سافٹ ویئر یا فریم ورک میں بنائیں گے؟
+      </p>
+    </div>
+
+    <!-- Author & Lab Bio Strip -->
+    <div class="flex flex-wrap items-center justify-between gap-4 p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] shadow-xs">
+      <div class="flex items-center gap-3.5">
+        <div class="w-12 h-12 rounded-full bg-indigo-100 dark:bg-indigo-950 flex items-center justify-center text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-900 font-serif-editorial text-lg font-bold">
+          MY
+        </div>
+        <div>
+          <h2 class="font-arabic-ui font-semibold text-sm sm:text-base text-[var(--text-primary)]">ڈاکٹر محمد یاسر</h2>
+          <p class="text-xs text-[var(--text-muted)] font-arabic-ui leading-normal">
+            چیئرمین، شعبہ کمپیوٹر سائنس | ڈائریکٹر: EmergenceX — انٹر ڈسپلنری کمپلیکسٹی سائنس لیب
+          </p>
+          <p class="text-[11px] text-[var(--text-muted)] font-arabic-ui">یونیورسٹی آف انجینئرنگ اینڈ ٹیکنالوجی (UET) لاہور، فیصل آباد کیمپس</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2" dir="ltr">
+        <button id="copy-citation-btn-10" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-arabic-ui bg-[var(--bg-card-subtle)] hover:bg-[var(--accent-subtle)] border border-[var(--bg-card-border)] text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors cursor-pointer" title="حوالہ نقل کریں">
+          <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+          <span>حوالہ نقل کریں</span>
+        </button>
+        <button id="share-lecture-btn-10" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-arabic-ui bg-[var(--bg-card-subtle)] hover:bg-[var(--accent-subtle)] border border-[var(--bg-card-border)] text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors cursor-pointer" title="شیئر کریں">
+          <i data-lucide="share-2" class="w-3.5 h-3.5"></i>
+          <span>شیئر</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Article Core Body -->
+  <div class="urdu-reading-text space-y-8 text-[var(--text-primary)]">
+    
+    <!-- Introduction: Tools and Trade-offs -->
+    <div class="p-6 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)]">
+      <h3 class="font-arabic-ui text-xl font-bold text-[var(--text-primary)] mb-3">
+        کون سا ٹول ہمارے مقصد کے لیے موزوں ترین ہے؟
+      </h3>
+      <p class="text-base sm:text-lg leading-[2.4] mb-4">
+        کیا ہمیں ہر چیز شروع سے خود کوڈ کرنی ہوگی؟ یا ایسے ٹولز موجود ہیں جو ایجنٹس، ان کے رویوں اور سمولیشنز کے ساتھ کام کرنے میں ہماری مدد کرتے ہیں؟ جواب ہے: جی ہاں۔
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 font-arabic-ui text-sm mb-4" dir="rtl">
+        <div class="p-3.5 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)]">
+          • کچھ ٹولز تصویری تجربات (<span class="en-term">visual experimentation</span>) کو آسان بناتے ہیں؛
+        </div>
+        <div class="p-3.5 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)]">
+          • کچھ پروگرامنگ کے ذریعے لامحدود کسٹمائزیشن فراہم کرتے ہیں؛
+        </div>
+        <div class="p-3.5 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)]">
+          • کچھ جغرافیائی اور مقامی نظاموں (<span class="en-term">spatial systems</span>) کے لیے مضبوط ہیں؛
+        </div>
+        <div class="p-3.5 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)]">
+          • اور کچھ مختلف ماڈلنگ اپروچز کو ایک ہی ماحول میں یکجا کرنے دیتے ہیں۔
+        </div>
+      </div>
+
+      <div class="p-4 rounded-xl bg-[var(--accent-subtle)] border border-[var(--accent-border)] font-bold text-[var(--accent)] text-base">
+        اس لیے: کوئی ایک ٹول ہر ماڈلنگ کے مسئلے کے لیے کائناتی طور پر بہترین (universally best) نہیں ہوتا۔
+      </div>
+    </div>
+
+    <!-- The 6 Selection Criteria -->
+    <section class="my-10 p-6 sm:p-8 rounded-2xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] shadow-xs">
+      <h3 class="font-arabic-ui text-xl font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
+        <i data-lucide="check-square" class="w-5 h-5 text-[var(--accent)]"></i>
+        <span>صحیح انتخاب کن بنیادی سوالات پر منحصر ہے؟</span>
+      </h3>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs sm:text-sm font-arabic-ui" dir="rtl">
+        <div class="p-3.5 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)]">
+          <span class="font-bold text-[var(--accent)]">1. تحقیقی سوال:</span>
+          <p class="text-[var(--text-muted)] mt-1">ہمارا بنیادی سائنسی سوال کیا ہے؟</p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)]">
+          <span class="font-bold text-[var(--accent)]">2. سسٹم کی نوعیت:</span>
+          <p class="text-[var(--text-muted)] mt-1">ہم کس قسم کا سسٹم ماڈل کرنا چاہتے ہیں؟</p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)]">
+          <span class="font-bold text-[var(--accent)]">3. جغرافیہ و فضا:</span>
+          <p class="text-[var(--text-muted)] mt-1">کیا Space یا Geography اہم ہے؟</p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)]">
+          <span class="font-bold text-[var(--accent)]">4. ماڈل کا اسکیل:</span>
+          <p class="text-[var(--text-muted)] mt-1">کتنے ہزار یا لاکھ ایجنٹس مطلوب ہیں؟</p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)]">
+          <span class="font-bold text-[var(--accent)]">5. کسٹمائزیشن:</span>
+          <p class="text-[var(--text-muted)] mt-1">ہمیں کتنی لچک اور ڈیٹا اینالیٹکس چاہیے؟</p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)]">
+          <span class="font-bold text-[var(--accent)]">6. تکنیکی مہارت:</span>
+          <p class="text-[var(--text-muted)] mt-1">ہماری ٹیم کی کوڈنگ اور ریاضیاتی مہارت کیا ہے؟</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deep Dive into the 5 Major ABM Tools -->
+    <div class="my-10 space-y-6">
+      <h3 class="font-arabic-ui text-xl sm:text-2xl font-bold text-[var(--text-primary)] mb-6 flex items-center gap-2">
+        <i data-lucide="layers" class="w-6 h-6 text-[var(--accent)]"></i>
+        <span>چند اہم اور ممتاز ایجنٹ بیسڈ ماڈلنگ ٹولز</span>
+      </h3>
+
+      <!-- 1. NetLogo -->
+      <div class="p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] hover:border-emerald-500/50 transition-colors">
+        <div class="flex items-center justify-between border-b border-[var(--border-subtle)] pb-3 mb-4">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 font-mono-code text-sm font-bold flex items-center justify-center">01</span>
+            <h4 class="font-arabic-ui font-bold text-lg text-[var(--text-primary)]">1. NetLogo</h4>
+          </div>
+          <span class="text-xs font-mono-code px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-700 dark:text-emerald-300" dir="ltr">Programmable Environment</span>
+        </div>
+        <p class="text-base sm:text-lg leading-[2.4] mb-3">
+          ایک <span class="en-term">Programmable Modeling Environment</span> ہے جسے قدرتی اور سماجی مظاہر کی سیمولیشنز بنانے کے لیے کثرت سے استعمال کیا جاتا ہے۔ اس میں ہم متعدد ایجنٹس کو رولز کے مطابق کام کرتے ہوئے لائیو دیکھ سکتے ہیں۔
+        </p>
+        <div class="p-3.5 rounded-xl bg-[var(--bg-card-subtle)] text-xs font-arabic-ui text-[var(--text-secondary)]">
+          <strong>نمایاں خوبیاں:</strong> بصری انٹرفیس (Visual Interface)، انٹرایکٹو سلائیڈرز، وسیع ڈاکومنٹیشن، اور سب سے بڑھ کر دنیا کی سب سے بڑی بلٹ ان ماڈلز لائبریری (<span class="en-term">Models Library</span>)۔
+        </div>
+      </div>
+
+      <!-- 2. Mesa -->
+      <div class="p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] hover:border-sky-500/50 transition-colors">
+        <div class="flex items-center justify-between border-b border-[var(--border-subtle)] pb-3 mb-4">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-sky-500/15 text-sky-700 dark:text-sky-300 font-mono-code text-sm font-bold flex items-center justify-center">02</span>
+            <h4 class="font-arabic-ui font-bold text-lg text-[var(--text-primary)]">2. Mesa (Python)</h4>
+          </div>
+          <span class="text-xs font-mono-code px-2 py-0.5 rounded bg-sky-500/15 text-sky-700 dark:text-sky-300" dir="ltr">Python Framework</span>
+        </div>
+        <p class="text-base sm:text-lg leading-[2.4] mb-3">
+          ایک پائتھن بیسڈ ایجنٹ بیسڈ ماڈلنگ فریم ورک (<span class="en-term">Python-based ABM Framework</span>) ہے۔ یہ پائتھن کے وسیع ڈیٹا سائنس ایکو سسٹم (Pandas, NumPy, Matplotlib, Jupyter) کے ساتھ کام کرنے کی مکمل صلاحیت رکھتا ہے۔
+        </p>
+        <div class="p-3.5 rounded-xl bg-[var(--bg-card-subtle)] text-xs font-arabic-ui text-[var(--text-secondary)]">
+          <strong>کس کے لیے موزوں:</strong> جو محققین پہلے سے پائتھن استعمال کرتے ہیں اور جدید مشین لرننگ یا شماریاتی تجزیاتی ورک فلو چاہتے ہیں۔
+        </div>
+      </div>
+
+      <!-- 3. GAMA -->
+      <div class="p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] hover:border-purple-500/50 transition-colors">
+        <div class="flex items-center justify-between border-b border-[var(--border-subtle)] pb-3 mb-4">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-purple-500/15 text-purple-700 dark:text-purple-300 font-mono-code text-sm font-bold flex items-center justify-center">03</span>
+            <h4 class="font-arabic-ui font-bold text-lg text-[var(--text-primary)]">3. GAMA</h4>
+          </div>
+          <span class="text-xs font-mono-code px-2 py-0.5 rounded bg-purple-500/15 text-purple-700 dark:text-purple-300" dir="ltr">Spatially Explicit & GIS</span>
+        </div>
+        <p class="text-base sm:text-lg leading-[2.4] mb-3">
+          ایک ایسا ماحول ہے جو خاص طور پر جغرافیائی اور مقامی نظاموں (<span class="en-term">spatially explicit ABM</span>) کے لیے انتہائی مضبوط صلاحیتیں رکھتا ہے۔
+        </p>
+        <div class="p-3.5 rounded-xl bg-[var(--bg-card-subtle)] text-xs font-arabic-ui text-[var(--text-secondary)]">
+          <strong>میدانِ عمل:</strong> شہری منصوبہ بندی (<span class="en-term">Urban Systems</span>)، ٹرانسپورٹیشن، زراعت، زمین کے استعمال (Land Use)، اور ماحولیاتی سسٹمز۔
+        </div>
+      </div>
+
+      <!-- 4. Repast -->
+      <div class="p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] hover:border-amber-500/50 transition-colors">
+        <div class="flex items-center justify-between border-b border-[var(--border-subtle)] pb-3 mb-4">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-amber-500/15 text-amber-700 dark:text-amber-300 font-mono-code text-sm font-bold flex items-center justify-center">04</span>
+            <h4 class="font-arabic-ui font-bold text-lg text-[var(--text-primary)]">4. Repast</h4>
+          </div>
+          <span class="text-xs font-mono-code px-2 py-0.5 rounded bg-amber-500/15 text-amber-700 dark:text-amber-300" dir="ltr">HPC & Distributed Toolkits</span>
+        </div>
+        <p class="text-base sm:text-lg leading-[2.4] mb-3">
+          ایک واحد ٹول کے بجائے مختلف ٹول کٹس کا ایک وسیع ایکو سسٹم ہے۔ یہ جاوا، پائتھن، اور سپر کمپیوٹرز پر ہائی پرفارمنس کمپیوٹنگ (<span class="en-term">High-Performance Computing - HPC</span>) کے لیے ڈیزائن کیا گیا ہے۔
+        </p>
+        <div class="p-3.5 rounded-xl bg-[var(--bg-card-subtle)] text-xs font-arabic-ui text-[var(--text-secondary)]">
+          <strong>اہمیت:</strong> جب ایجنٹس کی تعداد لاکھوں میں چلی جائے اور کلسٹرز پر متوازی پراسیسنگ درکار ہو۔
+        </div>
+      </div>
+
+      <!-- 5. AnyLogic -->
+      <div class="p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] hover:border-rose-500/50 transition-colors">
+        <div class="flex items-center justify-between border-b border-[var(--border-subtle)] pb-3 mb-4">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-rose-500/15 text-rose-700 dark:text-rose-300 font-mono-code text-sm font-bold flex items-center justify-center">05</span>
+            <h4 class="font-arabic-ui font-bold text-lg text-[var(--text-primary)]">5. AnyLogic</h4>
+          </div>
+          <span class="text-xs font-mono-code px-2 py-0.5 rounded bg-rose-500/15 text-rose-700 dark:text-rose-300" dir="ltr">Multimethod Simulation</span>
+        </div>
+        <p class="text-base sm:text-lg leading-[2.4] mb-3">
+          ایک ملٹی میتھڈ سیمولیشن ماحول ہے۔ اس میں ایجنٹ بیسڈ ماڈلنگ، ڈسکریٹ ایونٹ سیمولیشن (<span class="en-term">Discrete-Event</span>)، اور سسٹمز ڈائنامکس (<span class="en-term">System Dynamics</span>) کو ایک ہی ماڈل میں باہم جوڑا جا سکتا ہے۔
+        </p>
+        <div class="p-3.5 rounded-xl bg-[var(--bg-card-subtle)] text-xs font-arabic-ui text-[var(--text-secondary)]">
+          <strong>میدانِ عمل:</strong> انڈسٹریل مینوفیکچرنگ، سپلائی چین لاجسٹکس اور بڑے اسپتالوں کی ہائبرڈ مینجمنٹ۔
+        </div>
+      </div>
+    </div>
+
+    <!-- Epistemological Golden Rule -->
+    <div class="my-10 p-8 rounded-2xl bg-[var(--bg-card)] border-2 border-stone-800 dark:border-stone-200 text-center shadow-lg">
+      <h3 class="font-arabic-ui text-xl sm:text-2xl font-bold text-[var(--text-primary)] mb-4">
+        Which tool is the best? (کون سا ٹول بہترین ہے؟)
+      </h3>
+      <p class="font-arabic-ui text-base sm:text-lg text-[var(--text-secondary)] max-w-xl mx-auto leading-relaxed mb-6">
+        اس سوال سے زیادہ بہتر سوال یہ ہے کہ: <strong>"کون سا ٹول ہمارے مخصوص سوال کا جواب دینے میں مدد کرتا ہے؟"</strong>
+      </p>
+
+      <div class="space-y-2 font-mono-code text-xs sm:text-sm text-[var(--accent)] font-bold max-w-md mx-auto" dir="ltr">
+        <div class="p-2.5 rounded-lg bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)]">Powerful Tool ≠ Right Tool</div>
+        <div class="p-2.5 rounded-lg bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)]">Popular Tool ≠ Right Tool</div>
+        <div class="p-3 rounded-lg bg-[var(--accent)] text-white shadow-xs">Right Tool = Tool that fits the problem, purpose, and requirements</div>
+      </div>
+    </div>
+
+    <!-- Why NetLogo for our Series -->
+    <section class="my-10 p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-[var(--bg-card)] to-[var(--bg-card-subtle)] border-2 border-[var(--accent-border)]">
+      <h3 class="font-arabic-ui text-xl font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
+        <i data-lucide="compass" class="w-5 h-5 text-[var(--accent)]"></i>
+        <span>پھر ہم NetLogo سے کیوں شروع کریں گے؟</span>
+      </h3>
+
+      <p class="text-base sm:text-lg leading-[2.4] mb-4">
+        ہماری تدریسی سفر (<span class="en-term">teaching journey</span>) کے موجودہ مرحلے کے لیے <strong class="text-[var(--accent)]">NetLogo</strong> سب سے موزوں نقطۂ آغاز ہے۔
+      </p>
+
+      <p class="text-base sm:text-lg leading-[2.4] mb-4">
+        کیونکہ اس وقت ہمارا بنیادی مقصد یہ ہے کہ طلبہ اور محققین ایجنٹس کو اپنی آنکھوں سے حرکت کرتے دیکھیں؛ ان کے قواعد (Rules) کو سمجھیں؛ ان کے تعاملات کو مانیٹر کریں؛ اور دیکھیں کہ سکرین پر پیٹرنز کس طرح خود بخود برآمد (Emerge) ہوتے ہیں۔
+      </p>
+
+      <div class="p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] font-arabic-ui text-sm sm:text-base leading-relaxed">
+        <strong>ایک دانشمندانہ وضاحت:</strong> یہ ہمارا ایک تدریسی فیصلہ (<span class="en-term">Pedagogical Decision</span>) ہے، نہ کہ کوئی حتمی سائنسی فتویٰ۔
+      </div>
+
+      <div class="mt-6 p-4 rounded-xl bg-[var(--accent-subtle)] text-center font-nastaliq text-xl sm:text-2xl text-[var(--accent)] font-bold">
+        "پہلے مسئلے کو سمجھیے۔ پھر ٹول کا انتخاب کیجیے۔"
+      </div>
+    </section>
+
+    <!-- Teaser for Lecture 11 -->
+    <div class="p-6 rounded-2xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)] mb-8">
+      <div class="flex items-center justify-between mb-2">
+        <span class="text-xs font-mono-code text-[var(--accent)] font-semibold" dir="ltr">Next Step: Meet NetLogo</span>
+        <span class="text-xs font-arabic-ui text-[var(--text-muted)]">آنے والا پریکٹیکل مرحلہ</span>
+      </div>
+      <h4 class="font-arabic-ui font-bold text-lg text-[var(--text-primary)] mb-2">
+        اب اگلے لیکچر میں ہم NetLogo سے باقاعدہ ملیں گے:
+      </h4>
+      <p class="font-arabic-ui text-sm sm:text-base text-[var(--text-secondary)] leading-relaxed">
+        ہم اس کے انٹرفیس کو سمجھیں گے، دیکھیں گے کہ اس کی کمپیوٹیشنل دنیا کیسے بنتی ہے، اور پہلی مرتبہ ایک زندہ ماڈل کو چلا کر دیکھیں گے۔ نظریہ اب ایک متحرک مصنوعی نظام میں بدلنے والا ہے۔
+      </p>
+    </div>
+
+    <!-- Academic References -->
+    <section class="my-12 pt-8 border-t border-[var(--border-subtle)]" dir="ltr">
+      <div class="flex items-center justify-between mb-6">
+        <h3 class="font-serif-editorial text-xl sm:text-2xl font-bold text-[var(--text-primary)] flex items-center gap-2">
+          <i data-lucide="book-open" class="w-5 h-5 text-[var(--accent)]"></i>
+          <span>Academic References & Platforms</span>
+        </h3>
+        <span class="text-xs font-mono-code text-[var(--text-muted)]">ABM Methodological Literature</span>
+      </div>
+
+      <div class="space-y-4 font-mono-code text-xs sm:text-sm">
+        <div class="p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)]">
+          <p class="text-[var(--text-primary)] font-medium leading-relaxed">
+            Railsback, S. F., Lytinen, S. L., & Jackson, S. K. (2006). 
+            <span class="font-semibold text-[var(--accent)]">Agent-based simulation platforms: Review and development recommendations.</span> 
+            <em>Simulation</em>, 82(9), 609–623.
+          </p>
+        </div>
+        <div class="p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)]">
+          <p class="text-[var(--text-primary)] font-medium leading-relaxed">
+            Crooks, A. T., Castle, C. J. E., & Batty, M. (2008). 
+            <span class="font-semibold text-[var(--accent)]">Key challenges in agent-based modelling for geo-spatial simulation.</span> 
+            <em>Computers, Environment and Urban Systems</em>, 32(6), 417–430.
+          </p>
+        </div>
+        <div class="p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)]">
+          <p class="text-[var(--text-primary)] font-medium leading-relaxed">
+            Macal, C. M., & North, M. J. (2010). 
+            <span class="font-semibold text-[var(--accent)]">Tutorial on agent-based modelling and simulation.</span> 
+            <em>Journal of Simulation</em>, 4(3), 151–162.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tags -->
+    <div class="my-8 pt-6 border-t border-[var(--border-subtle)] text-right">
+      <div class="flex flex-wrap items-center justify-end gap-2" dir="ltr">
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#NetLogo</span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#Mesa</span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#GAMA</span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#Repast</span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#AnyLogic</span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#ComplexityScience</span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#EmergenceX</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom Navigation: Prev Lecture 9 / Return to Series Home -->
+  <footer class="mt-14 pt-8 border-t border-[var(--border-subtle)]">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" dir="rtl">
+      <div 
+        hx-get="/lectures/lecture-9.html" 
+        hx-target="#main-content" 
+        hx-swap="innerHTML transition:true"
+        hx-push-url="?lecture=9"
+        class="group p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] hover:border-[var(--accent-border)] transition-all cursor-pointer shadow-2xs"
+      >
+        <div class="flex items-center gap-2 text-xs font-arabic-ui text-[var(--text-muted)] mb-1">
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform"></i>
+          <span>گزشتہ لیکچر 09</span>
+        </div>
+        <h4 class="font-arabic-ui font-semibold text-sm text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors">
+          اب ہم سسٹمز کو کمپیوٹر میں ماڈل اور تجربہ کریں گے
+        </h4>
+      </div>
+
+      <div 
+        hx-get="/lectures/lecture-1.html" 
+        hx-target="#main-content" 
+        hx-swap="innerHTML transition:true"
+        hx-push-url="?lecture=1"
+        class="group p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] hover:border-[var(--accent-border)] transition-all cursor-pointer shadow-2xs text-left"
+        dir="ltr"
+      >
+        <div class="flex items-center justify-end gap-2 text-xs font-arabic-ui text-[var(--text-muted)] mb-1" dir="rtl">
+          <span>سلسلے کا آغاز</span>
+          <i data-lucide="arrow-left" class="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform"></i>
+        </div>
+        <h4 class="font-arabic-ui font-semibold text-sm text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors text-right" dir="rtl">
+          لیکچر 01: ہجوم میں ہر فرد اپنی راہ خود تلاش کرتا ہے
+        </h4>
+      </div>
+    </div>
+  </footer>
+</article>

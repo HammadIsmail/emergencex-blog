@@ -1,0 +1,263 @@
+<article id="lecture-3-article" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12" dir="rtl" lang="ur">
+  <!-- Article Header Meta -->
+  <header class="mb-10 pb-8 border-b border-[var(--border-subtle)] text-right">
+    <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[var(--accent-subtle)] border border-[var(--accent-border)] text-sm font-arabic-ui text-[var(--accent)] font-medium">
+        <i data-lucide="sparkles" class="w-4 h-4"></i>
+        <span>سلسلہ سسٹمز تھنکنگ و پیچیدگی — لیکچر 03</span>
+      </div>
+
+      <div class="flex items-center gap-3 text-xs font-mono-code text-[var(--text-muted)]" dir="ltr">
+        <span class="inline-flex items-center gap-1.5">
+          <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+          <span>7 min read</span>
+        </span>
+        <span>•</span>
+        <span class="inline-flex items-center gap-1.5">
+          <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+          <span>EmergenceX Series</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- Main Title -->
+    <h1 class="font-nastaliq text-3xl sm:text-4xl md:text-5xl font-bold text-[var(--text-primary)] leading-[2] sm:leading-[2.2] mb-6">
+      ہر مشکل نظام Complex نہیں ہوتا
+      <span class="block text-xl sm:text-2xl font-serif-editorial font-normal text-[var(--accent)] mt-1" dir="ltr">
+        Complicated vs. Complex Systems: Boeing 747 and Migrating Geese
+      </span>
+    </h1>
+
+    <p class="font-arabic-ui text-base sm:text-lg text-[var(--text-secondary)] leading-relaxed mb-6">
+      کیا کوئی نظام صرف زیادہ اجزا ہونے کی وجہ سے Complex بن جاتا ہے؟ بوئنگ 747 اور ہجرت کرتے ہوئے پرندوں کی تفصیلی تمثیل۔
+    </p>
+
+    <!-- Author & Lab Bio Strip -->
+    <div class="flex flex-wrap items-center justify-between gap-4 p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] shadow-xs">
+      <div class="flex items-center gap-3.5">
+        <div class="w-12 h-12 rounded-full bg-stone-200 dark:bg-stone-800 flex items-center justify-center text-[var(--accent)] border border-[var(--accent-border)] font-serif-editorial text-lg font-bold">
+          MY
+        </div>
+        <div>
+          <h2 class="font-arabic-ui font-semibold text-sm sm:text-base text-[var(--text-primary)]">ڈاکٹر محمد یاسر</h2>
+          <p class="text-xs text-[var(--text-muted)] font-arabic-ui leading-normal">
+            چیئرمین، شعبہ کمپیوٹر سائنس | ڈائریکٹر: EmergenceX — انٹر ڈسپلنری کمپلیکسٹی سائنس لیب
+          </p>
+          <p class="text-[11px] text-[var(--text-muted)] font-arabic-ui">یونیورسٹی آف انجینئرنگ اینڈ ٹیکنالوجی (UET) لاہور، فیصل آباد کیمپس</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2" dir="ltr">
+        <button id="copy-citation-btn-3" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-arabic-ui bg-[var(--bg-card-subtle)] hover:bg-[var(--accent-subtle)] border border-[var(--bg-card-border)] text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors cursor-pointer" title="حوالہ نقل کریں">
+          <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+          <span>حوالہ نقل کریں</span>
+        </button>
+        <button id="share-lecture-btn-3" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-arabic-ui bg-[var(--bg-card-subtle)] hover:bg-[var(--accent-subtle)] border border-[var(--bg-card-border)] text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors cursor-pointer" title="شیئر کریں">
+          <i data-lucide="share-2" class="w-3.5 h-3.5"></i>
+          <span>شیئر</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Article Core Body -->
+  <div class="urdu-reading-text space-y-8 text-[var(--text-primary)]">
+    
+    <!-- Intro Question -->
+    <div class="p-6 rounded-xl bg-[var(--bg-card)] border-r-4 border-r-[var(--accent)] border border-[var(--bg-card-border)]">
+      <p class="text-base sm:text-lg leading-[2.4]">
+        گزشتہ لیکچر میں ہم نے <span class="en-term">Emergence</span> کا تصور سمجھا تھا۔ ہم نے دیکھا کہ جب افراد یا اجزا ایک دوسرے کے ساتھ تعامل کرتے ہیں تو ان کے باہمی تعاملات سے بعض اوقات ایسے اجتماعی پیٹرنز پیدا ہوتے ہیں جو کسی ایک فرد یا جز میں اکیلے موجود نہیں ہوتے۔
+      </p>
+      <div class="mt-4 pt-4 border-t border-[var(--border-subtle)]">
+        <h4 class="font-arabic-ui font-bold text-base text-[var(--accent)] mb-2">اب ایک اہم سوال پیدا ہوتا ہے:</h4>
+        <p class="font-arabic-ui text-sm sm:text-base text-[var(--text-secondary)] leading-relaxed">
+          آخر کوئی نظام Complex کیوں کہلاتا ہے؟ کیا کوئی نظام صرف اس لیے Complex ہو جاتا ہے کہ اس میں بہت زیادہ اجزا ہوں؟ اسے سمجھنا مشکل ہو؟ وہ تکنیکی اعتبار سے پیچیدہ ہو؟ یا Complicated اور Complex دو بالکل مختلف تصورات ہیں؟
+        </p>
+      </div>
+    </div>
+
+    <!-- Example 1: Boeing 747 (Complicated System) -->
+    <section class="my-10 p-6 sm:p-8 rounded-2xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] shadow-xs">
+      <div class="flex items-center justify-between border-b border-[var(--border-subtle)] pb-4 mb-6">
+        <h3 class="font-arabic-ui text-xl font-bold text-[var(--text-primary)] flex items-center gap-2">
+          <i data-lucide="plane" class="w-5 h-5 text-amber-600"></i>
+          <span>ایک Boeing 747 کو دیکھیے (Complicated System)</span>
+        </h3>
+        <span class="text-xs font-mono-code px-2.5 py-1 rounded bg-amber-500/15 text-amber-700 dark:text-amber-300" dir="ltr">
+          Complicated Perspective
+        </span>
+      </div>
+
+      <p class="text-base sm:text-lg leading-[2.4] mb-4">
+        ایک Boeing 747 ایک انتہائی نفیس اور ترقی یافتہ انجینئرنگ سسٹم ہے۔ اس میں بے شمار پرزہ جات اور متعدد سب سسٹمز شامل ہوتے ہیں، مثلاً:
+        <span class="en-term">Propulsion</span> (حرکت پیدا کرنے کا نظام)،
+        <span class="en-term">Flight Control</span> (پرواز کو کنٹرول کرنے کا نظام)،
+        <span class="en-term">Avionics</span> (فضائی الیکٹرانک نظام)، اور
+        <span class="en-term">Electrical & Hydraulic Systems</span> (برقی اور ہائیڈرالک نظام)۔
+      </p>
+
+      <p class="text-base sm:text-lg leading-[2.4] mb-4">
+        طیارے کو ڈیزائن کرنا، بنانا، آپریٹ کرنا اور مینٹین کرنا یقیناً انتہائی مہارت کا کام ہے۔ <strong>لیکن یہاں بنیادی نکتہ یہ ہے: زیادہ اجزا یا نفیس انجینئرنگ کسی نظام کو خود بخود Complex نہیں بناتی۔</strong>
+      </p>
+
+      <div class="p-5 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)] font-arabic-ui text-sm sm:text-base leading-relaxed mb-4">
+        طیارے کے اجزا اور سب سسٹمز مخصوص مقاصد کے لیے ڈیزائن کیے جاتے ہیں۔ ان کے باہمی تعلقات پہلے سے طے شدہ فزکس اور انجینئرنگ اصولوں کے تحت لکیری ہوتے ہیں۔ اسی لیے اسے اجزا کی سطح پر توڑ کر (Deconstruct) مکمل طور پر سمجھا جا سکتا ہے۔ اس لیے Boeing 747 ایک <strong class="text-amber-700 dark:text-amber-400">Complicated System</strong> ہے۔
+      </div>
+    </section>
+
+    <!-- Example 2: Migrating Geese (Complex System) -->
+    <section class="my-10 p-6 sm:p-8 rounded-2xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] shadow-xs">
+      <div class="flex items-center justify-between border-b border-[var(--border-subtle)] pb-4 mb-6">
+        <h3 class="font-arabic-ui text-xl font-bold text-[var(--text-primary)] flex items-center gap-2">
+          <i data-lucide="feather" class="w-5 h-5 text-sky-600"></i>
+          <span>اب ہجرت کرتے ہوئے Geese کو دیکھیے (Complex System)</span>
+        </h3>
+        <span class="text-xs font-mono-code px-2.5 py-1 rounded bg-sky-500/15 text-sky-700 dark:text-sky-300" dir="ltr">
+          Complex Perspective
+        </span>
+      </div>
+
+      <p class="text-base sm:text-lg leading-[2.4] mb-4">
+        آسمان میں بہت سے geese ہجرت کے دوران پرواز کر رہے ہیں۔ ان کی آپسی پوزیشنیں بدلتی رہتی ہیں، اور ایک پرندے کی حرکت دوسرے پرندوں کے لیے حالات تبدیل کر سکتی ہے۔
+      </p>
+
+      <!-- 4 Pillars Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6" dir="rtl">
+        <div class="p-4 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)]">
+          <div class="font-arabic-ui font-bold text-sm text-[var(--accent)]">1. مقامی تعامل (Local Interaction)</div>
+          <p class="text-xs text-[var(--text-muted)] font-arabic-ui mt-1">ہر پرندہ اپنے قریبی ہمسایوں کی حرکت کو دیکھ کر ردعمل دیتا ہے۔</p>
+        </div>
+        <div class="p-4 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)]">
+          <div class="font-arabic-ui font-bold text-[var(--accent)]">2. خود تنظیم (Self-Organization)</div>
+          <p class="text-xs text-[var(--text-muted)] font-arabic-ui mt-1">بغیر کسی سنٹرل لیڈر کے منظم V-Formation کا بن جانا۔</p>
+        </div>
+        <div class="p-4 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)]">
+          <div class="font-arabic-ui font-bold text-[var(--accent)]">3. مطابقت (Adaptation)</div>
+          <p class="text-xs text-[var(--text-muted)] font-arabic-ui mt-1">تیز ہوا یا رکاوٹ آنے پر پرندوں کا اپنی پوزیشن بدل لینا۔</p>
+        </div>
+        <div class="p-4 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)]">
+          <div class="font-arabic-ui font-bold text-[var(--accent)]">4. ابھرتا ہوا نمونہ (Emergent Pattern)</div>
+          <p class="text-xs text-[var(--text-muted)] font-arabic-ui mt-1">V شکل کسی ایک پرندے میں موجود نہیں، تعاملات سے وجود میں آتی ہے۔</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Side-by-Side Comparison Box -->
+    <div class="my-10 p-6 sm:p-8 rounded-2xl bg-[var(--bg-card)] border-2 border-stone-800 dark:border-stone-200">
+      <h3 class="font-arabic-ui text-xl font-bold text-[var(--text-primary)] mb-4 text-center">
+        تو اصل فرق کیا ہے؟ (Complicated vs Complex)
+      </h3>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6" dir="rtl">
+        <div class="p-5 rounded-xl bg-[var(--bg-card-subtle)] border-t-4 border-t-amber-500">
+          <h4 class="font-arabic-ui font-bold text-base text-[var(--text-primary)] mb-2" dir="ltr">Complicated System</h4>
+          <p class="font-arabic-ui text-sm text-[var(--text-secondary)] leading-relaxed">
+            ایسا نظام جس میں بہت سے مخصوص اور باہم مربوط اجزا ہوں، لیکن جسے اصولی طور پر اس کے components، subsystems اور functions کو سمجھ کر analyze اور predict کیا جا سکے۔
+          </p>
+        </div>
+        <div class="p-5 rounded-xl bg-[var(--bg-card-subtle)] border-t-4 border-t-sky-500">
+          <h4 class="font-arabic-ui font-bold text-base text-[var(--text-primary)] mb-2" dir="ltr">Complex System</h4>
+          <p class="font-arabic-ui text-sm text-[var(--text-secondary)] leading-relaxed">
+            ایسا نظام جس کے متعدد interacting اجزا یا agents ایک دوسرے کے رویّے کو مسلسل متاثر کریں، اور ان کے تعاملات سے ایسے system-level پیٹرنز جنم لیں جنہیں کسی ایک پرزے سے پیشگی معلوم نہ کیا جا سکے۔
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Today's Core Lesson -->
+    <div class="my-10 p-8 rounded-2xl bg-[var(--bg-card)] border-2 border-[var(--accent)] text-center shadow-lg relative overflow-hidden">
+      <div class="w-12 h-12 rounded-full bg-[var(--accent-subtle)] text-[var(--accent)] mx-auto flex items-center justify-center mb-3">
+        <i data-lucide="bookmark" class="w-6 h-6"></i>
+      </div>
+      <span class="text-xs font-mono-code uppercase tracking-wider text-[var(--accent)] font-bold block mb-2" dir="ltr">
+        Fundamental Principle
+      </span>
+      <h2 class="font-nastaliq text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--text-primary)] leading-[2.1] mb-4">
+        ہر مشکل نظام Complex نہیں ہوتا
+      </h2>
+      <p class="font-arabic-ui text-base sm:text-lg text-[var(--text-secondary)] max-w-xl mx-auto leading-relaxed mb-4">
+        کسی نظام کی Complex nature صرف اجزا کی تعداد یا تکنیکی مشکل سے طے نہیں ہوتی۔ اصل سوال یہ ہے کہ جب اجزا آپس میں تعامل کرتے ہیں تو کیا وہ نان لینیئر ایمرجنٹ پیٹرنز پیدا کرتے ہیں یا نہیں؟
+      </p>
+      <div class="p-3 rounded-lg bg-[var(--bg-card-subtle)] font-bold text-[var(--accent)] max-w-md mx-auto">
+        صرف اجزا کو مت دیکھیے—ان کے درمیان موجود تعاملات کو دیکھیے۔
+      </div>
+    </div>
+
+    <!-- Academic References -->
+    <section class="my-12 pt-8 border-t border-[var(--border-subtle)]" dir="ltr">
+      <div class="flex items-center justify-between mb-6">
+        <h3 class="font-serif-editorial text-xl sm:text-2xl font-bold text-[var(--text-primary)] flex items-center gap-2">
+          <i data-lucide="book-open" class="w-5 h-5 text-[var(--accent)]"></i>
+          <span>Academic References</span>
+        </h3>
+        <span class="text-xs font-mono-code text-[var(--text-muted)]">Complex Systems Literature</span>
+      </div>
+
+      <div class="space-y-4 font-mono-code text-xs sm:text-sm">
+        <div class="p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)]">
+          <p class="text-[var(--text-primary)] font-medium leading-relaxed">
+            Amaral, L. A. N., & Ottino, J. M. (2004). 
+            <span class="font-semibold text-[var(--accent)]">Complex systems and networks: Challenges and opportunities for chemical and biological engineers.</span> 
+            <em>Chemical Engineering Science</em>, 59, 1653–1666.
+          </p>
+        </div>
+        <div class="p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)]">
+          <p class="text-[var(--text-primary)] font-medium leading-relaxed">
+            Couzin, I. D., & Krause, J. (2003). 
+            <span class="font-semibold text-[var(--accent)]">Self-organization and collective behavior in vertebrates.</span> 
+            <em>Advances in the Study of Behavior</em>, 32, 1–75.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tags -->
+    <div class="my-8 pt-6 border-t border-[var(--border-subtle)] text-right">
+      <div class="flex flex-wrap items-center justify-end gap-2" dir="ltr">
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#ComplicatedVsComplex</span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#Boeing747</span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#ComplexityScience</span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#EmergenceX</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom Navigation: Prev Lecture 2 / Next Lecture 4 -->
+  <footer class="mt-14 pt-8 border-t border-[var(--border-subtle)]">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" dir="rtl">
+      <div 
+        hx-get="/lectures/lecture-2.html" 
+        hx-target="#main-content" 
+        hx-swap="innerHTML transition:true"
+        hx-push-url="?lecture=2"
+        class="group p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] hover:border-[var(--accent-border)] transition-all cursor-pointer shadow-2xs"
+      >
+        <div class="flex items-center gap-2 text-xs font-arabic-ui text-[var(--text-muted)] mb-1">
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform"></i>
+          <span>گزشتہ لیکچر 02</span>
+        </div>
+        <h4 class="font-arabic-ui font-semibold text-sm text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors">
+          فرد قائم ربطِ ملت سے ہے (ایمرجنس اور سیلف آرگنائزیشن)
+        </h4>
+      </div>
+
+      <div 
+        hx-get="/lectures/lecture-4.html" 
+        hx-target="#main-content" 
+        hx-swap="innerHTML transition:true"
+        hx-push-url="?lecture=4"
+        class="group p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] hover:border-[var(--accent-border)] transition-all cursor-pointer shadow-2xs text-left"
+        dir="ltr"
+      >
+        <div class="flex items-center justify-end gap-2 text-xs font-arabic-ui text-[var(--text-muted)] mb-1" dir="rtl">
+          <span>اگلا لیکچر 04</span>
+          <i data-lucide="arrow-left" class="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform"></i>
+        </div>
+        <h4 class="font-arabic-ui font-semibold text-sm text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors text-right" dir="rtl">
+          پیچیدگی اور ایجنٹ بیسڈ ماڈلنگ (جہاز، ہوابازی اور اینالیٹیکل باؤنڈری)
+        </h4>
+      </div>
+    </div>
+  </footer>
+</article>

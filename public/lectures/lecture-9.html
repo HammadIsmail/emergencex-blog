@@ -1,0 +1,250 @@
+<article id="lecture-9-article" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12" dir="rtl" lang="ur">
+  <!-- Article Header Meta -->
+  <header class="mb-10 pb-8 border-b border-[var(--border-subtle)] text-right">
+    <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-violet-500/15 border border-violet-500/30 text-sm font-arabic-ui text-violet-700 dark:text-violet-400 font-medium">
+        <i data-lucide="laptop" class="w-4 h-4"></i>
+        <span>سلسلہ سسٹمز تھنکنگ و پیچیدگی — لیکچر 09</span>
+      </div>
+
+      <div class="flex items-center gap-3 text-xs font-mono-code text-[var(--text-muted)]" dir="ltr">
+        <span class="inline-flex items-center gap-1.5">
+          <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+          <span>8 min read</span>
+        </span>
+        <span>•</span>
+        <span class="inline-flex items-center gap-1.5">
+          <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+          <span>EmergenceX Series</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- Main Title -->
+    <h1 class="font-nastaliq text-3xl sm:text-4xl md:text-5xl font-bold text-[var(--text-primary)] leading-[2] sm:leading-[2.2] mb-6">
+      اب ہم سسٹمز کو کمپیوٹر میں ماڈل اور تجربہ کریں گے
+      <span class="block text-xl sm:text-2xl font-serif-editorial font-normal text-[var(--accent)] mt-1" dir="ltr">
+        From Systems Thinking to Computational Modeling: Theory, Model, Experiment
+      </span>
+    </h1>
+
+    <div class="p-6 rounded-2xl bg-[var(--bg-card)] border-r-4 border-r-violet-600 border border-[var(--bg-card-border)] mb-6 shadow-xs">
+      <h3 class="font-arabic-ui font-bold text-lg text-violet-700 dark:text-violet-400 mb-2">
+        کیا یہ واقعی ممکن ہے؟
+      </h3>
+      <p class="font-arabic-ui text-sm sm:text-base text-[var(--text-secondary)] leading-relaxed">
+        پچھلی آٹھ قسطوں میں ہم نے سسٹمز کو فکری انداز میں سمجھا۔ ہم نے دیکھا کہ سسٹمز کے اجزا جڑے ہوتے ہیں، ایجنٹس اپنے بیہیوئرز رکھتے ہیں، تعاملات سے نئے پیٹرنز پیدا ہوتے ہیں۔ لیکن اب ہمارا علمی سفر ایک نئے فیز میں داخل ہو رہا ہے: <strong>کمپیوٹیشنل ماڈلنگ اور تجربات</strong>۔
+      </p>
+    </div>
+
+    <!-- Author & Lab Bio Strip -->
+    <div class="flex flex-wrap items-center justify-between gap-4 p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] shadow-xs">
+      <div class="flex items-center gap-3.5">
+        <div class="w-12 h-12 rounded-full bg-violet-100 dark:bg-violet-950 flex items-center justify-center text-violet-700 dark:text-violet-300 border border-violet-200 dark:border-violet-900 font-serif-editorial text-lg font-bold">
+          MY
+        </div>
+        <div>
+          <h2 class="font-arabic-ui font-semibold text-sm sm:text-base text-[var(--text-primary)]">ڈاکٹر محمد یاسر</h2>
+          <p class="text-xs text-[var(--text-muted)] font-arabic-ui leading-normal">
+            چیئرمین، شعبہ کمپیوٹر سائنس | ڈائریکٹر: EmergenceX — انٹر ڈسپلنری کمپلیکسٹی سائنس لیب
+          </p>
+          <p class="text-[11px] text-[var(--text-muted)] font-arabic-ui">یونیورسٹی آف انجینئرنگ اینڈ ٹیکنالوجی (UET) لاہور، فیصل آباد کیمپس</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2" dir="ltr">
+        <button id="copy-citation-btn-9" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-arabic-ui bg-[var(--bg-card-subtle)] hover:bg-[var(--accent-subtle)] border border-[var(--bg-card-border)] text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors cursor-pointer" title="حوالہ نقل کریں">
+          <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+          <span>حوالہ نقل کریں</span>
+        </button>
+        <button id="share-lecture-btn-9" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-arabic-ui bg-[var(--bg-card-subtle)] hover:bg-[var(--accent-subtle)] border border-[var(--bg-card-border)] text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors cursor-pointer" title="شیئر کریں">
+          <i data-lucide="share-2" class="w-3.5 h-3.5"></i>
+          <span>شیئر</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Article Core Body -->
+  <div class="urdu-reading-text space-y-8 text-[var(--text-primary)]">
+    
+    <!-- Traffic Simulation Thought Experiment -->
+    <section class="my-10 p-6 sm:p-8 rounded-2xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] shadow-xs">
+      <h3 class="font-arabic-ui text-xl font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
+        <i data-lucide="car" class="w-5 h-5 text-[var(--accent)]"></i>
+        <span>ٹریفک کی مثال: کیا ہم نے کسی کار کو ٹریفک جام بنانے کا حکم دیا تھا؟</span>
+      </h3>
+
+      <p class="text-base sm:text-lg leading-[2.4] mb-4">
+        فرض کریں ہم ٹریفک کو سمجھنا چاہتے ہیں۔ سڑک پر بہت سی کاریں موجود ہیں۔ ہر کار اپنے اردگرد کے حالات کے مطابق عمل کرتی ہے۔ ہم ایک کمپیوٹیشنل ماڈل میں کاروں کو انفرادی اکائیوں (<span class="en-term">Individual Entities</span>) کے طور پر پیش کر سکتے ہیں، انہیں ایک ماحول (<span class="en-term">Environment</span>) میں رکھ سکتے ہیں، اور کچھ سادہ قواعد (<span class="en-term">Rules</span>) وضع کر سکتے ہیں:
+      </p>
+
+      <div class="p-5 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)] mb-4 space-y-2 text-sm sm:text-base font-arabic-ui">
+        <p>1. سامنے راستہ خالی ہو تو آگے بڑھو؛</p>
+        <p>2. سامنے والی گاڑی قریب ہو تو رفتار کم کرو؛</p>
+        <p>3. سگنل سرخ ہو تو رک جاؤ۔</p>
+      </div>
+
+      <p class="text-base sm:text-lg leading-[2.4] mb-4">
+        پھر ہم دیکھتے ہیں کہ جب بہت سی کاریں آپس میں تعامل کرتی ہیں تو پورے سسٹم میں کیا ہوتا ہے؟<br>
+        <strong>کیا ہم نے کسی کار کو کہا تھا: "ٹریفک جام (Traffic Jam) بناؤ؟" ہرگز نہیں۔</strong>
+      </p>
+
+      <div class="p-5 rounded-xl bg-[var(--accent-subtle)] border border-[var(--accent-border)] font-arabic-ui text-base sm:text-lg font-bold text-[var(--accent)]">
+        لیکن کاروں کے انفرادی قواعد اور باہمی تعاملات کے نتیجے میں ٹریفک جام (Traffic Congestion) پیدا ہو جاتی ہے۔ اگر ایسا پیٹرن بغیر کسی مرکزی کنٹرولر کے خود بخود پیدا ہو جائے تو اسے Emergence کہتے ہیں۔
+      </div>
+    </section>
+
+    <!-- Definition: What is Agent-Based Modeling? -->
+    <div class="my-10 p-6 sm:p-8 rounded-2xl bg-[var(--bg-card)] border-2 border-violet-600 shadow-md">
+      <div class="flex items-center gap-2 font-arabic-ui font-bold text-violet-600 dark:text-violet-400 text-lg mb-3">
+        <i data-lucide="cpu" class="w-5 h-5"></i>
+        <span>ایجنٹ بیسڈ ماڈلنگ (ABM) کیا ہے؟</span>
+      </div>
+      <blockquote class="p-5 rounded-xl bg-[var(--bg-card-subtle)] font-nastaliq text-xl sm:text-2xl leading-[2.4] text-[var(--text-primary)] mb-6">
+        "ایجنٹ بیسڈ ماڈلنگ ایک کمپیوٹیشنل اپروچ ہے جس میں ہم کسی سسٹم کو انفرادی اکائیوں (Agents)، ان کے رویوں (Behaviours)، تعاملات (Interactions) اور ماحول (Environment) کی صورت میں ماڈل کرتے ہیں، اور دیکھتے ہیں کہ ان سے سسٹم کی مجموعی سطح پر کون سے پیٹرنز ابھرتے ہیں۔"
+      </blockquote>
+      <p class="text-base sm:text-lg leading-[2.4] text-[var(--text-secondary)]">
+        یعنی اب تک ہم سسٹمز کو صرف فکری انداز میں سمجھ رہے تھے۔ اب ہم انہیں کمپیوٹر کے اندر چلا کر ان کے ساتھ تجربات بھی کریں گے۔
+      </p>
+    </div>
+
+    <!-- Epistemological Choice: What to Include and Exclude -->
+    <div class="p-6 rounded-2xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)]">
+      <h3 class="font-arabic-ui text-lg sm:text-xl font-bold text-[var(--text-primary)] mb-3">
+        بنیادی اصول: ماڈل حقیقی دنیا کی مکمل نقل نہیں ہوتا
+      </h3>
+      <p class="text-base sm:text-lg leading-[2.4] mb-4">
+        جب ہم ماڈل بناتے ہیں تو ہمیں کڑے سائنسی انتخاب کرنے پڑتے ہیں:
+      </p>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center text-xs font-arabic-ui mb-4">
+        <div class="p-3 rounded-lg bg-[var(--bg-card)] border border-[var(--bg-card-border)] font-semibold">کیا شامل کرنا ہے؟</div>
+        <div class="p-3 rounded-lg bg-[var(--bg-card)] border border-[var(--bg-card-border)] font-semibold">کیا چھوڑنا ہے؟</div>
+        <div class="p-3 rounded-lg bg-[var(--bg-card)] border border-[var(--bg-card-border)] font-semibold">کن اکائیوں کو ایجنٹ بنانا ہے؟</div>
+        <div class="p-3 rounded-lg bg-[var(--bg-card)] border border-[var(--bg-card-border)] font-semibold">کون سے بیہیوئرز اہم ہیں؟</div>
+      </div>
+      <p class="text-sm sm:text-base font-arabic-ui text-[var(--text-muted)] leading-relaxed">
+        اس لیے ماڈل حقیقت کے بارے میں ہمارے منتخب مفروضوں (<span class="en-term">Assumptions</span>) کی ایک کمپیوٹیشنل نمائندگی ہوتا ہے۔
+      </p>
+    </div>
+
+    <!-- In Silico Experiments with ABM -->
+    <section class="my-10 p-6 sm:p-8 rounded-2xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] shadow-xs">
+      <h3 class="font-arabic-ui text-xl font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
+        <i data-lucide="test-tube" class="w-5 h-5 text-[var(--accent)]"></i>
+        <span>ایجنٹ بیسڈ ماڈلز کے ساتھ ہم کیا تجربات کر سکتے ہیں؟</span>
+      </h3>
+
+      <div class="p-5 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)] mb-6 space-y-2 font-arabic-ui text-sm sm:text-base">
+        <p>• اگر سڑک پر گاڑیوں کی تعداد 50 فیصد بڑھ جائے تو کیا ہوگا؟</p>
+        <p>• اگر اچانک کوئی ایک سڑک بند ہو جائے تو ٹریفک فلو پر کیا اثر پڑے گا؟</p>
+        <p>• اگر ایجنٹس کے سپیڈ رولز بدل دیے جائیں تو مجموعی سسٹم کیسا برتاؤ کرے گا؟</p>
+      </div>
+
+      <div class="p-4 rounded-xl bg-[var(--accent-subtle)] border border-[var(--accent-border)] font-arabic-ui text-base font-semibold text-[var(--accent)]">
+        یعنی ہم صرف سسٹم کو بیان (<span class="en-term">Describe</span>) نہیں کرتے، بلکہ اس کے ساتھ <span class="en-term">Computational Experiments</span> کرتے ہیں!
+      </div>
+    </section>
+
+    <!-- ABM Tools Showcase -->
+    <section class="my-10 p-6 sm:p-8 rounded-2xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] shadow-xs">
+      <h3 class="font-arabic-ui text-xl font-bold text-[var(--text-primary)] mb-3">
+        لیکن یہ ماڈلز بنائیں گے کیسے؟ ٹولز اور پلیٹ فارمز
+      </h3>
+      <p class="text-base sm:text-lg leading-[2.4] mb-4">
+        کیا ہمیں ہر چیز شروع سے کوڈ کرنی ہوگی؟ ضروری نہیں! اس مقصد کے لیے دنیا بھر میں طاقتور سائنسی ٹولز موجود ہیں:
+      </p>
+
+      <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 mb-6" dir="ltr">
+        <div class="p-3.5 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)] text-center">
+          <span class="font-mono-code font-bold text-sm text-[var(--accent)]">NetLogo</span>
+          <p class="text-[11px] text-[var(--text-muted)] mt-1 font-arabic-ui">تعلیم و فوری ماڈلنگ</p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)] text-center">
+          <span class="font-mono-code font-bold text-sm text-sky-600">Mesa (Python)</span>
+          <p class="text-[11px] text-[var(--text-muted)] mt-1 font-arabic-ui">پائتھن ریسرچ فریم ورک</p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)] text-center">
+          <span class="font-mono-code font-bold text-sm text-emerald-600">GAMA</span>
+          <p class="text-[11px] text-[var(--text-muted)] mt-1 font-arabic-ui">جغرافیائی و شہری ماڈلز</p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)] text-center">
+          <span class="font-mono-code font-bold text-sm text-purple-600">Repast</span>
+          <p class="text-[11px] text-[var(--text-muted)] mt-1 font-arabic-ui">جاوا و سی پلس پلس</p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)] text-center">
+          <span class="font-mono-code font-bold text-sm text-amber-600">AnyLogic</span>
+          <p class="text-[11px] text-[var(--text-muted)] mt-1 font-arabic-ui">انڈسٹریل ہائبرڈ سمولیشن</p>
+        </div>
+      </div>
+
+      <div class="p-4 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)] font-arabic-ui text-sm sm:text-base leading-relaxed">
+        <strong>ایک یاد رکھنے والا نکتہ:</strong> ایجنٹ بیسڈ ماڈلنگ کوئی مخصوص سافٹ ویئر نہیں ہے، بلکہ یہ سوچنے اور تحقیق کرنے کی ایک باقاعدہ فکری و کمپیوٹیشنل اپروچ (<span class="en-term">Approach</span>) ہے، جبکہ یہ سافٹ ویئرز اس اپروچ کو نافذ کرنے کے اوزار ہیں۔
+      </div>
+    </section>
+
+    <!-- The 4-Stage Computational Journey -->
+    <div class="my-10 p-8 rounded-2xl bg-[var(--bg-card)] border-2 border-stone-800 dark:border-stone-200 text-center shadow-lg">
+      <span class="text-xs font-mono-code text-[var(--accent)] font-bold block mb-2" dir="ltr">The Scientific Loop</span>
+      <h3 class="font-nastaliq text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-4">
+        یہیں سے ہمارا باقاعدہ کمپیوٹیشنل سفر شروع ہوتا ہے
+      </h3>
+      <div class="inline-block py-3 px-6 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)] font-mono-code text-sm sm:text-base text-[var(--accent)] font-bold" dir="ltr">
+        Theory ➔ Model ➔ Experiment ➔ Understanding
+      </div>
+      <p class="font-arabic-ui text-sm sm:text-base text-[var(--text-muted)] mt-4 max-w-lg mx-auto">
+        اگلی قسط میں ہم دیکھیں گے کہ ہم اپنی پریکٹیکل ماڈلنگ جرنی کا آغاز کس ٹول سے کریں گے اور کیوں۔
+      </p>
+    </div>
+
+    <!-- Tags -->
+    <div class="my-8 pt-6 border-t border-[var(--border-subtle)] text-right">
+      <div class="flex flex-wrap items-center justify-end gap-2" dir="ltr">
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#ComputationalThinking</span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#AgentBasedModeling</span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#NetLogo</span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#MesaPython</span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#EmergenceX</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom Navigation: Prev Lecture 8 / Return to Series Overview -->
+  <footer class="mt-14 pt-8 border-t border-[var(--border-subtle)]">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" dir="rtl">
+      <div 
+        hx-get="/lectures/lecture-8.html" 
+        hx-target="#main-content" 
+        hx-swap="innerHTML transition:true"
+        hx-push-url="?lecture=8"
+        class="group p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] hover:border-[var(--accent-border)] transition-all cursor-pointer shadow-2xs"
+      >
+        <div class="flex items-center gap-2 text-xs font-arabic-ui text-[var(--text-muted)] mb-1">
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform"></i>
+          <span>گزشتہ لیکچر 08</span>
+        </div>
+        <h4 class="font-arabic-ui font-semibold text-sm text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors">
+          مسلسل بڑھتی ہوئی تبدیلی کو کیسے روکیں؟ (Balancing Feedback)
+        </h4>
+      </div>
+
+      <div 
+        hx-get="/lectures/lecture-10.html" 
+        hx-target="#main-content" 
+        hx-swap="innerHTML transition:true"
+        hx-push-url="?lecture=10"
+        class="group p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] hover:border-[var(--accent-border)] transition-all cursor-pointer shadow-2xs text-left"
+        dir="ltr"
+      >
+        <div class="flex items-center justify-end gap-2 text-xs font-arabic-ui text-[var(--text-muted)] mb-1" dir="rtl">
+          <span>اگلا لیکچر 10</span>
+          <i data-lucide="arrow-left" class="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform"></i>
+        </div>
+        <h4 class="font-arabic-ui font-semibold text-sm text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors text-right" dir="rtl">
+          ایجنٹ بیسڈ ماڈلنگ شروع کرنی ہے—لیکن کس Tool سے؟
+        </h4>
+      </div>
+    </div>
+  </footer>
+</article>
