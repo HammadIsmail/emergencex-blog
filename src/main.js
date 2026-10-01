@@ -239,9 +239,9 @@ function bindArticleActions() {
       desc: 'ڈاکٹر محمد یاسر کی سسٹمز تھنکنگ اور کمپلیکسٹی سائنس پر تحریر'
     },
     5: {
-      citation: `ڈاکٹر محمد یاسر (2024). ایجنٹ بیسڈ ماڈلنگ کی بنیادیں اور اطلاقات — لیکچر 5. EmergenceX: انٹر ڈسپلنری کمپلیکسٹی سائنس لیب، UET لاہور، فیصل آباد کیمپس۔`,
-      title: 'ایجنٹ بیسڈ ماڈلنگ کی بنیادیں — لیکچر 05',
-      desc: 'خودمختار ایجنٹس اور مائیکرو میکرو اصول — EmergenceX Lab'
+      citation: `ڈاکٹر محمد یاسر (2024). Computer Science کے طلبہ اور Researchers کو Agent-Based Modeling کیوں سیکھنی چاہیے؟ — لیکچر 5. EmergenceX: انٹر ڈسپلنری کمپلیکسٹی سائنس لیب، UET لاہور، فیصل آباد کیمپس۔`,
+      title: 'Computer Science اور Agent-Based Modeling — لیکچر 05',
+      desc: 'سائبر سیکیورٹی، نیٹ ورک سیگمنٹیشن اور مفروضات کا عملی ماڈل — EmergenceX Lab'
     },
     6: {
       citation: `ڈاکٹر محمد یاسر (2024). کیا ایک خلیے (Cell) کے رویّے سے پورے ٹیومر کی کہانی سمجھی جا سکتی ہے؟ — لیکچر 6. EmergenceX: انٹر ڈسپلنری کمپلیکسٹی سائنس لیب، UET لاہور، فیصل آباد کیمپس۔`,
@@ -351,7 +351,7 @@ function bindHypothesisTester() {
     const data = hypotheses[index];
     displayBox.innerHTML = `
       <div class="flex items-center justify-between mb-3">
-        <span class="text-xs font-mono-code px-2 py-0.5 rounded bg-rose-500/15 text-rose-700 dark:text-rose-300 border border-rose-500/30" dir="ltr">
+        <span class="text-xs font-mono-code px-2 py-0.5 rounded bg-[var(--bg-card)] text-[var(--accent)] border border-[var(--border-subtle)]" dir="ltr">
           ${data.tag}
         </span>
         <span class="text-xs font-arabic-ui text-[var(--text-muted)]">مفروضہ برائے خلیاتی بقا</span>
@@ -517,5 +517,7 @@ document.addEventListener('DOMContentLoaded', () => {
       swap: 'innerHTML'
     });
     updateActiveLectureInDrawer(targetUrl);
+  } else {
+    updateActiveLectureInDrawer('/lectures/lecture-1.html');
   }
 });

@@ -1,77 +1,288 @@
 <article id="lecture-5-article" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12" dir="rtl" lang="ur">
+  <!-- Article Header Meta -->
   <header class="mb-10 pb-8 border-b border-[var(--border-subtle)] text-right">
     <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
-      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-500/15 border border-sky-500/30 text-sm font-arabic-ui text-sky-700 dark:text-sky-400 font-medium">
-        <i data-lucide="sparkles" class="w-4 h-4"></i>
-        <span>سلسلہ سسٹمز تھنکنگ — لیکچر 05 (آئندہ لیکچر)</span>
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[var(--bg-card-subtle)] border border-[var(--border-subtle)] text-xs font-arabic-ui text-[var(--text-muted)] font-medium">
+        <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+        <span>سلسلہ سسٹمز تھنکنگ و پیچیدگی — لیکچر 05</span>
       </div>
-      <div class="text-xs font-mono-code text-[var(--text-muted)]" dir="ltr">
-        EmergenceX Series • Dr. Muhammad Yasir
+
+      <div class="flex items-center gap-3 text-xs font-mono-code text-[var(--text-muted)]" dir="ltr">
+        <span class="inline-flex items-center gap-1.5">
+          <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+          <span>8 min read</span>
+        </span>
+        <span>•</span>
+        <span class="inline-flex items-center gap-1.5">
+          <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+          <span>EmergenceX Series</span>
+        </span>
       </div>
     </div>
 
+    <!-- Main Title -->
     <h1 class="font-nastaliq text-3xl sm:text-4xl md:text-5xl font-bold text-[var(--text-primary)] leading-[2] sm:leading-[2.2] mb-6">
-      ایجنٹ بیسڈ ماڈلنگ (ABM) کی بنیادیں اور اطلاقات
+      Computer Science کے طلبہ اور Researchers کو Agent-Based Modeling کیوں سیکھنی چاہیے؟
       <span class="block text-xl sm:text-2xl font-serif-editorial font-normal text-[var(--accent)] mt-1" dir="ltr">
-        Foundations of Agent-Based Modeling: From Micro-Decisions to Macro-Phenomena
+        Why CS Researchers Should Embrace Agent-Based Modeling: A Cybersecurity Perspective
       </span>
     </h1>
 
-    <p class="font-arabic-ui text-base sm:text-lg text-[var(--text-secondary)] leading-relaxed">
-      اگر انفرادی اکائیاں اپنے اپنے مفاد اور حالات کے تحت آزاد فیصلے کر رہی ہوں تو اجتماعی رویوں کی ماڈلنگ کیسے ممکن ہے؟
-    </p>
+    <div class="p-6 rounded-2xl bg-[var(--bg-card)] border-r-4 border-r-[var(--accent)] border border-[var(--bg-card-border)] mb-6 shadow-xs">
+      <h3 class="font-arabic-ui font-bold text-lg text-[var(--text-primary)] mb-2">
+        Experiment with Assumptions Before Changing Reality
+      </h3>
+      <p class="font-arabic-ui text-sm sm:text-base text-[var(--text-secondary)] leading-relaxed">
+        شاید ایک کمپیوٹر سائنٹسٹ کے لیے ایجنٹ بیسڈ ماڈلنگ کی سب سے پُرکشش بات یہ ہے کہ آپ صرف کوڈ نہیں لکھتے، بلکہ <strong>اپنے مفروضات (Assumptions) کو قابلِ عمل (Executable) بناتے ہیں</strong>۔
+      </p>
+    </div>
+
+    <!-- Author & Lab Bio Strip -->
+    <div class="flex flex-wrap items-center justify-between gap-4 p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] shadow-xs">
+      <div class="flex items-center gap-3.5">
+        <div class="w-12 h-12 rounded-full bg-[var(--bg-card-subtle)] flex items-center justify-center text-[var(--text-primary)] border border-[var(--border-subtle)] font-serif-editorial text-lg font-bold">
+          MY
+        </div>
+        <div>
+          <h2 class="font-arabic-ui font-semibold text-sm sm:text-base text-[var(--text-primary)]">ڈاکٹر محمد یاسر</h2>
+          <p class="text-xs text-[var(--text-muted)] font-arabic-ui leading-normal">
+            چیئرمین، شعبہ کمپیوٹر سائنس | ڈائریکٹر: EmergenceX — انٹر ڈسپلنری کمپلیکسٹی سائنس لیب
+          </p>
+          <p class="text-[11px] text-[var(--text-muted)] font-arabic-ui">یونیورسٹی آف انجینئرنگ اینڈ ٹیکنالوجی (UET) لاہور، فیصل آباد کیمپس</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2" dir="ltr">
+        <button id="copy-citation-btn-5" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-arabic-ui bg-[var(--bg-card-subtle)] hover:bg-[var(--accent-subtle)] border border-[var(--bg-card-border)] text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors cursor-pointer" title="حوالہ نقل کریں">
+          <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+          <span>حوالہ نقل کریں</span>
+        </button>
+        <button id="share-lecture-btn-5" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-arabic-ui bg-[var(--bg-card-subtle)] hover:bg-[var(--accent-subtle)] border border-[var(--bg-card-border)] text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors cursor-pointer" title="شیئر کریں">
+          <i data-lucide="share-2" class="w-3.5 h-3.5"></i>
+          <span>شیئر</span>
+        </button>
+      </div>
+    </div>
   </header>
 
-  <!-- Editorial Preview Concept -->
-  <div class="my-10 p-8 rounded-2xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] shadow-xs">
-    <div class="flex items-center gap-3 mb-4">
-      <div class="p-2.5 rounded-xl bg-sky-500/15 text-sky-600 dark:text-sky-400">
-        <i data-lucide="cpu" class="w-6 h-6"></i>
-      </div>
-      <h3 class="font-arabic-ui text-xl font-bold text-[var(--text-primary)]">
-        لیکچر 04 کا منطقی تسلسل (Logical Continuity)
+  <!-- Article Core Body -->
+  <div class="urdu-reading-text space-y-8 text-[var(--text-primary)]">
+    
+    <!-- Introduction: Organization Network Scenario -->
+    <div class="p-6 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)]">
+      <h3 class="font-arabic-ui text-xl font-bold text-[var(--text-primary)] mb-3">
+        نیٹ ورک میں مالویئر داخل ہو تو اصل سوال کیا ہوتا ہے؟
       </h3>
+      <p class="text-base sm:text-lg leading-[2.4] mb-4">
+        فرض کیجیے ایک بڑے ادارے (<span class="en-term">organization</span>) کا کمپیوٹر نیٹ ورک ہے۔ اس میں عام اینڈ ڈیوائسز (<span class="en-term">end devices</span>)، سرورز (<span class="en-term">servers</span>)، راؤٹرز، سوئچز اور مختلف نیٹ ورک سیگمنٹس موجود ہیں۔
+      </p>
+      <p class="text-base sm:text-lg leading-[2.4] mb-4">
+        اب نیٹ ورک میں مالویئر (<span class="en-term">malware</span>) داخل ہو جاتا ہے۔
+      </p>
+      <div class="p-4 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)] text-sm sm:text-base font-arabic-ui mb-3">
+        <strong>سوال صرف یہ نہیں ہے:</strong> کیا کوئی ڈیوائس انفیکٹڈ (<span class="en-term">infected</span>) ہوگی؟<br />
+        <strong>بلکہ اصل سائنسی سوال یہ ہے:</strong> کون سا جزو (<span class="en-term">component</span>) متاثر ہوا، وہ نیٹ ورک میں کہاں واقع ہے، اور اس کے باہمی رابطے (<span class="en-term">connections</span>) کیا ہیں؟
+      </div>
+      <p class="text-base sm:text-lg leading-[2.4]">
+        ایک عام اینڈ ڈیوائس کمپرومائز ہو تو بعض حالات میں اس کا اثر محدود رہ سکتا ہے۔ لیکن اگر یہ حملہ کسی اہم سرور تک پہنچ جائے جس سے متعدد سسٹمز یا سروسز وابستہ ہوں، تو پورے سسٹم پر اس کے اثرات (<span class="en-term">system-level consequences</span>) یکسر مختلف اور تباہ کن ہو سکتے ہیں۔
+      </p>
     </div>
 
-    <p class="font-arabic-ui text-base sm:text-lg text-[var(--text-secondary)] leading-relaxed mb-6">
-      جیسا کہ ڈاکٹر محمد یاسر نے لیکچر 04 کے اختتام پر فرمایا: اب سوال یہ ہے کہ جب نظام کے اندر متعدد خودمختار ایجنٹس (افراد، کمپنیاں، گاڑیاں، روبوٹس) موجود ہوں تو ان کے تعامل کو ریاضیاتی اور کمپیوٹیشنل طور پر کیسے پیش کیا جائے؟ اس لیکچر کی تفصیلی دستاویز جلد سلسلے میں شامل کی جائے گی۔
-    </p>
-
-    <!-- 3 Core Pillars of ABM Preview -->
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-      <div class="p-4 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)] text-center">
-        <div class="font-arabic-ui font-bold text-sm text-[var(--text-primary)] mb-1">خودمختار ایجنٹس</div>
-        <div class="text-xs font-mono-code text-[var(--accent)] mb-2" dir="ltr">Autonomous Agents</div>
-        <p class="text-xs font-arabic-ui text-[var(--text-muted)]">ہر ایجنٹ کے اپنے داخلی قواعد اور محدود معلومات۔</p>
+    <!-- Core Formula Callout 1 -->
+    <div class="p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-subtle)] text-center shadow-xs">
+      <div class="text-xs font-mono-code text-[var(--accent)] font-bold mb-2" dir="ltr">
+        Fundamental Complexity Law in Networks
       </div>
-
-      <div class="p-4 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)] text-center">
-        <div class="font-arabic-ui font-bold text-sm text-[var(--text-primary)] mb-1">ماحولیاتی فریم ورک</div>
-        <div class="text-xs font-mono-code text-[var(--accent)] mb-2" dir="ltr">Spatial Environment</div>
-        <p class="text-xs font-arabic-ui text-[var(--text-muted)]">وہ ٹپولوجی جس میں ایجنٹس باہم تعامل کرتے ہیں۔</p>
-      </div>
-
-      <div class="p-4 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)] text-center">
-        <div class="font-arabic-ui font-bold text-sm text-[var(--text-primary)] mb-1">اجتماعی ایمرجنس</div>
-        <div class="text-xs font-mono-code text-[var(--accent)] mb-2" dir="ltr">Macro Emergence</div>
-        <p class="text-xs font-arabic-ui text-[var(--text-muted)]">نیچے سے اوپر کی طرف جنم لینے والے پیٹرنز۔</p>
+      <div class="font-mono-code text-sm sm:text-base md:text-lg font-bold text-[var(--text-primary)] leading-relaxed" dir="ltr">
+        Different Components + Different Roles + Different Connections → Different System-Level Consequences
       </div>
     </div>
 
-    <div class="flex justify-center">
-      <button 
-        hx-get="/lectures/lecture-4.html" 
-        hx-target="#main-content" 
-        hx-swap="innerHTML transition:true"
-        hx-push-url="?lecture=4"
-        class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[var(--accent)] text-white hover:bg-[var(--accent-hover)] font-arabic-ui text-sm font-semibold transition-all cursor-pointer shadow-xs"
-      >
-        <i data-lucide="book-open" class="w-4 h-4"></i>
-        <span>واپس فعال لیکچر 04 پر جائیں</span>
-      </button>
+    <!-- The Role of ABM -->
+    <section class="space-y-4">
+      <h3 class="font-arabic-ui text-2xl font-bold text-[var(--text-primary)]">
+        کیا ہم ایسے نظام کو کمپیوٹیشنل انداز میں ماڈل کر سکتے ہیں؟
+      </h3>
+      <p class="text-base sm:text-lg leading-[2.4]">
+        تو سوال پیدا ہوتا ہے: کیا ہم ایسے سسٹم کو کمپیوٹیشنل طور پر ماڈل کر کے اس کے ممکنہ نتائج (<span class="en-term">outcomes</span>) کو دریافت کر سکتے ہیں؟ یہیں <strong class="text-[var(--accent)]">ایجنٹ بیسڈ ماڈلنگ (ABM)</strong> کارآمد ثابت ہوتی ہے۔
+      </p>
+
+      <div class="p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] shadow-xs">
+        <h4 class="font-arabic-ui font-bold text-lg text-[var(--text-primary)] mb-3 flex items-center gap-2">
+          <i data-lucide="layers" class="w-5 h-5 text-[var(--accent)]"></i>
+          <span>ABM درحقیقت کیا کرتی ہے؟</span>
+        </h4>
+        <p class="text-base sm:text-lg leading-[2.4] mb-4">
+          ہم سسٹم کی ہر چیز کو ایجنٹ نہیں بناتے۔ بلکہ صرف اُن اجزا کو ماڈل کرتے ہیں جو ہمارے تحقیقی سوال کے لیے کلیدی اہمیت رکھتے ہوں۔
+        </p>
+        <ul class="space-y-3 font-arabic-ui text-sm sm:text-base leading-relaxed text-[var(--text-secondary)]">
+          <li class="flex items-start gap-2">
+            <span class="text-[var(--accent)] font-bold">•</span>
+            <span><strong>ایجنٹس (Agents):</strong> صارفین (<span class="en-term">users</span>), کمپیوٹرز، حملہ آور (<span class="en-term">attackers</span>) یا مدافعتی سسٹمز (<span class="en-term">defenders</span>) کو ہم ایجنٹس کے طور پر ماڈل کرتے ہیں، جن کے اپنے داخلی رویے اور تعاملی قواعد (<span class="en-term">interaction rules</span>) ہوتے ہیں۔</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-[var(--accent)] font-bold">•</span>
+            <span><strong>ماحول (Environment):</strong> نیٹ ورک کی ساخت (<span class="en-term">topology</span>) اور مختلف ڈیوائسز کے درمیان کنکشنز اس ماحول کا حصہ ہوتے ہیں جس میں یہ تمام ایجنٹس حرکت اور تعامل کرتے ہیں۔</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="p-5 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)] text-center">
+        <p class="font-arabic-ui text-base font-semibold text-[var(--text-primary)] mb-2">
+          پھر بیہیویئرز اور رولز طے کر کے ہم ورچوئل لیب میں کمپیوٹیشنل تجربات (<span class="en-term">computational experiments</span>) کرتے ہیں:
+        </p>
+        <div class="inline-block px-4 py-2 rounded-lg bg-[var(--accent)] text-white font-mono-code text-sm sm:text-base font-bold shadow-xs" dir="ltr">
+          Individual Behaviour → Interactions → System-Level Outcomes
+        </div>
+      </div>
+    </section>
+
+    <!-- Practical Cybersecurity Scenario -->
+    <section class="my-10 p-6 sm:p-8 rounded-2xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] shadow-xs">
+      <h3 class="font-arabic-ui text-xl sm:text-2xl font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
+        <i data-lucide="activity" class="w-6 h-6 text-[var(--accent)]"></i>
+        <span>ایک عملی سائبر سیکیورٹی منظرنامہ (Cybersecurity Scenario)</span>
+      </h3>
+      <p class="text-base sm:text-lg leading-[2.4] mb-4">
+        فرض کیجیے ایک ادارہ اپنے نیٹ ورک کی لچک پذیری (<span class="en-term">cyber resilience</span>) کو جانچنا اور بہتر بنانا چاہتا ہے۔ اس کے لیے ماڈلنگ کا عمل مندرجہ ذیل مراحل پر مشتمل ہوتا ہے:
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 text-center font-arabic-ui text-xs sm:text-sm my-6" dir="rtl">
+        <div class="p-4 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)]">
+          <span class="text-xs font-mono-code text-[var(--accent)] font-bold block mb-1">01</span>
+          <strong class="text-[var(--text-primary)]">بیس لائن کنفیگریشن</strong>
+          <p class="text-[var(--text-muted)] mt-1">موجودہ نیٹ ورک کے اصل ڈھانچے کو بیس لائن بنانا۔</p>
+        </div>
+        <div class="p-4 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)]">
+          <span class="text-xs font-mono-code text-[var(--accent)] font-bold block mb-1">02</span>
+          <strong class="text-[var(--text-primary)]">متبادل ڈھانچے</strong>
+          <p class="text-[var(--text-muted)] mt-1">مختلف سیگمنٹیشن اور رسائی کے قواعد وضع کرنا۔</p>
+        </div>
+        <div class="p-4 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)]">
+          <span class="text-xs font-mono-code text-[var(--accent)] font-bold block mb-1">03</span>
+          <strong class="text-[var(--text-primary)]">کمپیوٹیشنل تجربات</strong>
+          <p class="text-[var(--text-muted)] mt-1">حملہ آور اور مدافعتی ایجنٹس کے باہمی ٹیسٹ چلانا۔</p>
+        </div>
+        <div class="p-4 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)]">
+          <span class="text-xs font-mono-code text-[var(--accent)] font-bold block mb-1">04</span>
+          <strong class="text-[var(--text-primary)]">نتائج کا موازنہ</strong>
+          <p class="text-[var(--text-muted)] mt-1">اثاثوں کے خطرات اور تجارتی فوائد کا تقابل۔</p>
+        </div>
+      </div>
+
+      <div class="p-4 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)] text-center font-mono-code text-xs sm:text-sm text-[var(--accent)] font-bold mb-4" dir="ltr">
+        Baseline → Alternatives → Experiments → Compare Outcomes
+      </div>
+
+      <p class="text-base sm:text-lg leading-[2.4] text-[var(--text-secondary)]">
+        سائبر سیکیورٹی ریسرچ میں ایجنٹ بیسڈ سیمولیشن کو دیگر کمپیوٹیشنل تکنیکوں کے ساتھ ملا کر نیٹ ورک سیگمنٹیشن جیسے پیچیدہ مسائل میں متبادل کنفیگریشنز کو پرکھنے اور فیصلے میں معاونت (<span class="en-term">decision support</span>) کے لیے وسیع پیمانے پر استعمال کیا گیا ہے۔
+      </p>
+    </section>
+
+    <!-- Epistemological Wisdom Box -->
+    <div class="my-10 p-6 sm:p-8 rounded-2xl bg-[var(--bg-card)] border-2 border-stone-800 dark:border-stone-200 text-center shadow-lg">
+      <h3 class="font-arabic-ui text-xl sm:text-2xl font-bold text-[var(--text-primary)] mb-3">
+        ABM informs decisions; it does not replace expert judgment.
+      </h3>
+      <p class="font-arabic-ui text-base sm:text-lg text-[var(--text-secondary)] max-w-xl mx-auto leading-relaxed mb-6">
+        حقیقی نیٹ ورک پر براہ راست تجربہ کرنا بے حد مہنگا، خطرناک یا تباہ کن ہو سکتا ہے۔ اس لیے عقل مندی یہ ہے کہ پہلے ماڈل میں مفروضات کی آزمائش کی جائے۔
+      </p>
+
+      <div class="p-4 rounded-xl bg-[var(--accent-subtle)] border border-[var(--accent-border)] font-bold text-[var(--accent)] font-mono-code text-sm sm:text-base max-w-md mx-auto mb-4" dir="ltr">
+        Experiment with Assumptions Before Changing Reality
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-4 text-xs font-mono-code font-bold text-[var(--text-muted)]" dir="ltr">
+        <span class="px-3 py-1 rounded bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)]">Explore ≠ Prove</span>
+        <span>•</span>
+        <span class="px-3 py-1 rounded bg-[var(--bg-card-subtle)] border border-[var(--bg-card-border)]">Simulation ≠ Reality</span>
+      </div>
+
+      <p class="text-xs sm:text-sm font-arabic-ui text-[var(--text-muted)] mt-4">
+        ایک قابلِ اعتبار ماڈل کے لیے درست مفروضات (<span class="en-term">assumptions</span>)، تصوراتی ڈیزائن، شواہد، حساسیت کا تجزیہ (<span class="en-term">sensitivity analysis</span>) اور توثیق (<span class="en-term">validation</span>) لازمی عناصر ہیں۔
+      </p>
     </div>
+
+    <!-- Final Takeaway for CS Students -->
+    <section class="my-10 p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-[var(--bg-card)] to-[var(--bg-card-subtle)] border-2 border-[var(--accent-border)]">
+      <h3 class="font-arabic-ui text-xl sm:text-2xl font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
+        <i data-lucide="graduation-cap" class="w-6 h-6 text-[var(--accent)]"></i>
+        <span>تو کمپیوٹر سائنس کے طلبہ کو ABM کیوں سیکھنی چاہیے؟</span>
+      </h3>
+      <p class="text-base sm:text-lg leading-[2.4] mb-4">
+        کیونکہ پیچیدہ نظاموں میں:
+      </p>
+
+      <div class="p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)] font-mono-code text-sm sm:text-base text-center font-bold text-[var(--accent)] mb-4" dir="ltr">
+        Individual Differences + Interactions + Structure → Emergent Outcomes
+      </div>
+
+      <p class="text-base sm:text-lg leading-[2.4] mb-4">
+        یہ تینوں مل کر ایسے اجتماعی نتائج پیدا کرتے ہیں جو کسی ایک جزو کو الگ تھلگ دیکھ کر سمجھے ہی نہیں جا سکتے۔ ایسے چیلنجز میں ایجنٹ بیسڈ ماڈلنگ آپ کے کمپیوٹیشنل ٹول کٹ میں ایک بے پناہ طاقتور ہتھیار ہے۔
+      </p>
+
+      <div class="p-6 rounded-xl bg-[var(--accent-subtle)] text-right">
+        <h4 class="font-arabic-ui font-bold text-lg text-[var(--accent)] mb-2">
+          ایک کمپیوٹر سائنسدان کے لیے سب سے دلفریب حقیقت:
+        </h4>
+        <p class="font-arabic-ui text-base sm:text-lg leading-[2.4] text-[var(--text-primary)]">
+          <strong>آپ صرف کوڈ نہیں لکھتے، آپ اپنی سوچ اور مفروضات کو قابلِ عمل (Executable) بناتے ہیں۔</strong><br />
+          اور پھر تجربات کر کے دیکھتے ہیں کہ اگر حالات، رویے اور رابطے بدل جائیں تو پورے نظام کے نتائج کیسے بدلتے ہیں!
+        </p>
+      </div>
+    </section>
+
+    <!-- Academic References -->
+    <section class="my-12 pt-8 border-t border-[var(--border-subtle)]" dir="ltr">
+      <div class="flex items-center justify-between mb-6">
+        <h3 class="font-serif-editorial text-xl sm:text-2xl font-bold text-[var(--text-primary)] flex items-center gap-2">
+          <i data-lucide="book-open" class="w-5 h-5 text-[var(--accent)]"></i>
+          <span>Academic References & Further Reading</span>
+        </h3>
+        <span class="text-xs font-mono-code text-[var(--text-muted)]">Cybersecurity & ABM Literature</span>
+      </div>
+
+      <div class="space-y-4 font-mono-code text-xs sm:text-sm">
+        <div class="p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)]">
+          <p class="text-[var(--text-primary)] font-medium leading-relaxed">
+            Macal, C. M., & North, M. J. (2010). 
+            <span class="font-semibold text-[var(--accent)]">Tutorial on agent-based modelling and simulation.</span> 
+            <em>Journal of Simulation</em>, 4(3), 151–162.
+          </p>
+        </div>
+        <div class="p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)]">
+          <p class="text-[var(--text-primary)] font-medium leading-relaxed">
+            Wagner, N., Sahin, C. S., Winterrose, M. L., Riordan, J., Peña, J., Hanson, D., & Streilein, W. W. (2016). 
+            <span class="font-semibold text-[var(--accent)]">Towards automated cyber decision support: A case study on network segmentation for security.</span> 
+            <em>2016 IEEE Symposium Series on Computational Intelligence (SSCI)</em>.
+          </p>
+        </div>
+        <div class="p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--bg-card-border)]">
+          <p class="text-[var(--text-primary)] font-medium leading-relaxed">
+            Vestad, A., & Yang, B. (2024). 
+            <span class="font-semibold text-[var(--accent)]">A Survey of Agent-Based Modeling for Cybersecurity.</span> 
+            In <em>Human Factors in Cybersecurity</em>, pp. 83–93.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tags -->
+    <div class="my-8 pt-6 border-t border-[var(--border-subtle)] text-right">
+      <div class="flex flex-wrap items-center justify-end gap-2" dir="ltr">
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#AgentBasedModeling</span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#ABM</span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#ComputerScience</span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#Cybersecurity</span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#Simulation</span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#SystemsThinking</span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono-code bg-[var(--bg-card-subtle)] text-[var(--text-muted)] border border-[var(--bg-card-border)]">#EmergenceX</span>
+      </div>
+    </div>
+
   </div>
 
+  <!-- Bottom Navigation: Prev Lecture 04 / Next Lecture 06 -->
   <footer class="mt-14 pt-8 border-t border-[var(--border-subtle)]">
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" dir="rtl">
       <div 
@@ -83,7 +294,7 @@
       >
         <div class="flex items-center gap-2 text-xs font-arabic-ui text-[var(--text-muted)] mb-1">
           <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform"></i>
-          <span>گزشتہ لیکچر 04 (فعال)</span>
+          <span>گزشتہ لیکچر 04</span>
         </div>
         <h4 class="font-arabic-ui font-semibold text-sm text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors">
           پیچیدگی اور ایجنٹ بیسڈ ماڈلنگ (جہاز و ہوابازی)
@@ -99,7 +310,7 @@
         dir="ltr"
       >
         <div class="flex items-center justify-end gap-2 text-xs font-arabic-ui text-[var(--text-muted)] mb-1" dir="rtl">
-          <span>اگلا لیکچر 06 (فعال مطالعہ)</span>
+          <span>اگلا لیکچر 06</span>
           <i data-lucide="arrow-left" class="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform"></i>
         </div>
         <h4 class="font-arabic-ui font-semibold text-sm text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors text-right" dir="rtl">

@@ -16,7 +16,7 @@
 2. **لیکچر 02:** فرد قائم ربطِ ملت سے ہے، تنہا کچھ نہیں (Flocking, Self-Organization & Allama Iqbal)
 3. **لیکچر 03:** ہر مشکل نظام Complex نہیں ہوتا (Complicated vs. Complex: Boeing 747 vs. Geese)
 4. **لیکچر 04:** پیچیدگی اور ایجنٹ بیسڈ ماڈلنگ (Analytical Boundary & Perspective Shift)
-5. **لیکچر 05:** ایجنٹ بیسڈ ماڈلنگ (ABM) کی بنیادیں اور اطلاقات (Micro-rules to Macro-patterns)
+5. **لیکچر 05:** Computer Science کے طلبہ اور Researchers کو Agent-Based Modeling کیوں سیکھنی چاہیے؟ (Cybersecurity & Network Resilience)
 6. **لیکچر 06:** کیا ایک خلیے کے رویّے سے پورے ٹیومر کی کہانی سمجھی جا سکتی ہے؟ (Computational Oncology)
 7. **لیکچر 07:** نتیجہ ہمیشہ کہانی کا اختتام نہیں ہوتا (Reinforcing Feedback Dynamics)
 8. **لیکچر 08:** مسلسل بڑھتی ہوئی تبدیلی کو کیسے روکیں؟ (Balancing Feedback Loops & Desired State)
